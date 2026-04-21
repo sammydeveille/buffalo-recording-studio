@@ -1,0 +1,3511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Buffalo Studio Sheffield — Analog Recording Studio with SSL 4000G+</title>
+  <meta name="description" content="Buffalo Studio is a Sheffield analog recording studio built around a 48-channel SSL 4000G+ console, vintage microphones and rare outboard gear. Book sessions in Sheffield with producer JB Pilon for warm, organic, record-ready sound.">
+  <meta name="keywords" content="recording studio Sheffield, Sheffield music producer, analog recording Sheffield, SSL 4000G, mixing Sheffield, music production South Yorkshire, JB Pilon, vintage microphones, Sheffield studio, record production UK">
+  <meta name="author" content="Buffalo Studio">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="geo.region" content="GB-SHF">
+  <meta name="geo.placename" content="Sheffield">
+
+  <link rel="canonical" href="https://buffalostudio.co.uk/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Buffalo Studio">
+  <meta property="og:title" content="Buffalo Studio Sheffield — Analog Recording Studio">
+  <meta property="og:description" content="48-channel SSL 4000G+, vintage outboard, two rooms, one sound. Book a session in Sheffield with producer JB Pilon.">
+  <meta property="og:url" content="https://buffalostudio.co.uk/">
+  <meta property="og:image" content="https://buffalostudio.co.uk/assets/buffalo.jpg">
+  <meta property="og:locale" content="en_GB">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Buffalo Studio Sheffield — Analog Recording Studio">
+  <meta name="twitter:description" content="48-channel SSL 4000G+, vintage outboard, two rooms, one sound. Book a session in Sheffield with producer JB Pilon.">
+  <meta name="twitter:image" content="https://buffalostudio.co.uk/assets/buffalo.jpg">
+
+  <meta name="theme-color" content="#000000">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" as="image" href="assets/buffalo.jpg">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "MusicVenue"],
+        "@id": "https://buffalostudio.co.uk/#studio",
+        "name": "Buffalo Studio",
+        "alternateName": "Buffalo Recording Studio",
+        "description": "Analog recording studio in Sheffield built around a 48-channel SSL 4000G+ console with rare vintage microphones and outboard gear.",
+        "url": "https://buffalostudio.co.uk/",
+        "image": "https://buffalostudio.co.uk/assets/buffalo.jpg",
+        "logo": "https://buffalostudio.co.uk/assets/buffalo.jpg",
+        "telephone": "+44 7944 221580",
+        "email": "hello@jbpilon.com",
+        "priceRange": "£££",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sheffield",
+          "addressRegion": "South Yorkshire",
+          "addressCountry": "GB"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Sheffield" },
+          { "@type": "AdministrativeArea", "name": "South Yorkshire" },
+          { "@type": "AdministrativeArea", "name": "Yorkshire" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/jbpilon/",
+          "https://www.facebook.com/jbpilon",
+          "https://jbpilon.com"
+        ],
+        "founder": {
+          "@type": "Person",
+          "name": "JB Pilon",
+          "jobTitle": "Producer, Engineer, Multi-Instrumentalist",
+          "url": "https://jbpilon.com"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Where is Buffalo Studio located?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Buffalo Studio is based in Sheffield, South Yorkshire, UK — a short trip from Leeds, Manchester, Nottingham and the rest of the North."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What services does Buffalo Studio offer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Recording sessions, mixing, full record production, live-to-tape tracking, and overdub sessions — all centred on a 48-channel SSL 4000G+ console with vintage outboard and microphones."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I book a session?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tap the BOOK button to open the booking form, or email hello@jbpilon.com. You can also call or WhatsApp 07944 221 580."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who is the producer at Buffalo Studio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "JB Pilon — producer, engineer and multi-instrumentalist — runs Buffalo Studio. His credits span Warner, Parlophone, BBC, Pitch & Sync and dozens of independent artists."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+
+
+
+#book-btn {
+  position: fixed;
+  top: 35px;       /* Aligned with the center of the + button */
+  right: 100px;    /* Space to the left of the menu trigger */
+  z-index: 10001;  /* Ensure it's above the menu blur and trigger background */
+  
+  /* Typography */
+  font-family: 'PickleWeasel', sans-serif;
+  font-size: 3.5rem;      /* Significantly bigger font */
+  font-weight: normal;
+  text-decoration: none;
+  
+  /* Colors */
+  color: var(--earth);    /* The studio green */
+  background: none;       /* Removed background */
+  border: none;           /* Removed border */
+  
+  /* Interaction */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+  line-height: 1;
+}
+
+#book-btn:hover {
+  color: #ffcc00; /* Vibrant yellow on hover */
+}
+
+/* Mobile Adjustment */
+@media (max-width: 600px) {
+  #book-btn {
+    right: 85px;
+    font-size: 2rem;
+    top: 30px;
+  }
+}
+
+/* The Blur Overlay Container */
+.progressive-blur {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* Stay above everything */
+  pointer-events: none; /* Let clicks pass through to the site */
+  user-select: none;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Top Blur Overlay */
+.blur-top {
+  top: 0;
+  height: 200px;
+  /* Fades the blur out from top to bottom */
+  mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+  background: linear-gradient(to bottom, var(--bg), transparent);
+}
+
+/* Bottom Blur Overlay */
+.blur-bottom {
+  bottom: 0;
+  height: 50px;
+  /* Fades the blur out from bottom to top */
+  mask-image: linear-gradient(to top, black 20%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, black 20%, transparent 100%);
+  background: linear-gradient(to top, var(--bg), transparent);
+}
+
+
+
+
+    /* ─── FONTS ─────────────────────────────────────────────── */
+    @font-face {
+      font-family: 'PickleWeasel';
+      src: url('assets/pickleweasel.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'NovecentoWide';
+      src: url('assets/Novecentowide-Bold-webfont.ttf') format('truetype');
+      font-weight: 700;
+    }
+    @font-face {
+      font-family: 'NovecentoWide';
+      src: url('assets/Novecentowide-Light-webfont.ttf') format('truetype');
+      font-weight: 300;
+    }
+    @font-face {
+      font-family: 'Cal Sans';
+      src: url('assets/CalSans-Regular.ttf') format('truetype');
+      font-weight: 300;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('assets/Montserrat-VariableFont_wght.ttf') format('truetype');
+      font-weight: 300;
+    }
+
+    /* ─── TOKENS ──────────────────────────────────────────────
+       Central design tokens. All colors (especially the brand
+       orange) are driven from these variables so they can be
+       tuned in one place. Keeps the stylesheet DRY.
+    ─────────────────────────────────────────────────────────── */
+    :root {
+      --bg:           #000000;
+      --bg-alt:       #000000;
+      --bg-card:      #0d0d0d;        /* Subtle card surface on black */
+      --bg-elev:      #151515;        /* Slightly elevated surface   */
+      --white:        #ffffff;
+      --dim:          #c0c0c0;
+      --muted:        #555555;
+
+      /* New palette — orange is reserved for tiny flourishes.
+         Green / yellow / red do the heavy lifting for accents. */
+      --green:        #8fae6a;        /* primary accent (vibrant earth green) */
+      --green-soft:   rgba(143,174,106,0.14);
+      --green-hover:  #a4c178;
+      --yellow:       #ffcc00;        /* secondary accent (warm pop) */
+      --yellow-soft:  rgba(255,204,0,0.14);
+      --red:          #c94f3a;        /* tertiary accent (muted brick) */
+      --red-soft:     rgba(201,79,58,0.14);
+
+      --accent:       #ff6600;        /* Brand orange — used sparingly now */
+      --accent-soft:  rgba(255,102,0,0.12);
+      --accent-hover: #ff7d26;
+      --earth:        #7d8c6a;
+      --border:       rgba(255,255,255,0.09);
+      --border-strong:rgba(255,255,255,0.22);
+      --font-d:       'NovecentoWide', sans-serif;
+      --font-b:       'Cal Sans', Helvetica, Arial, sans-serif;
+      --font-pw:      'PickleWeasel', sans-serif;
+
+      /* Map aliases so pasted-in snippets that use --ff-d / --cr
+         resolve correctly. */
+      --ff-d:         var(--font-d);
+      --cr:           var(--white);
+    }
+
+    /* PickleWeasel utility — reserved for 1–2 words at a time to
+       create big, expressive accents. Always BIG and loud. */
+    .pw {
+      font-family: var(--font-pw);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      line-height: 0.85;
+      display: inline-block;
+    }
+    .pw--xl { font-size: 1.4em; }
+    .pw--xxl { font-size: 1.7em; }
+
+    /* ─── RESET ─────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: var(--font-b);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Screen-reader-only — keeps semantic headings for SEO/a11y
+       without affecting the visual layout. */
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* ─── MENU TRIGGER ──────────────────────────────────────── */
+    #menu-trigger {
+      position: fixed;
+      top: 28px;
+      right: 36px;
+      z-index: 10001;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(10,10,10,0.7);
+      backdrop-filter: blur(10px);
+      color: var(--white);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.3s, transform 0.45s cubic-bezier(0.34,1.56,0.64,1), background 0.3s;
+      padding: 0;
+    }
+    #menu-trigger:hover {
+      border-color: rgba(255,255,255,0.5);
+      background: rgba(30,30,30,0.9);
+    }
+    #menu-trigger.open { transform: rotate(45deg); }
+    #menu-trigger svg { display: block; }
+
+    /* ─── MENU OVERLAY ──────────────────────────────────────── */
+#menu-overlay {
+  position: fixed;
+  inset: 0;
+  /* Dark semi-transparent background */
+  background: rgba(10, 10, 10, 0.9); 
+  /* The Apple-style frosted glass effect */
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 10vw;
+  gap: 0.2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#menu-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+    .flip-link {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      font-family: var(--font-d);
+      font-size: clamp(2.4rem, 7vw, 5.8rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--white);
+      line-height: 0.98;
+      letter-spacing: -0.02em;
+    }
+    .flip-top, .flip-bottom { display: flex; }
+    .flip-bottom {
+      position: absolute;
+      inset: 0;
+      color: var(--accent);
+    }
+    .flip-top span, .flip-bottom span {
+      display: inline-block;
+      transition: transform 0.32s ease-in-out;
+    }
+    .flip-bottom span { transform: translateY(100%); }
+    .flip-link:hover .flip-top span  { transform: translateY(-100%); }
+    .flip-link:hover .flip-bottom span { transform: translateY(0); }
+
+    /* ─── SECTION BASE ──────────────────────────────────────── */
+    section { width: 100%; }
+
+    /* ─── SCROLL REVEAL ─────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  /* Slower duration (1.2s) and custom easing for a smoother look */
+  transition: opacity 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+    /* ══════════════════════════════════════════════════════════
+       HERO
+    ══════════════════════════════════════════════════════════ */
+    #hero {
+      height: 100vh;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .title-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .word-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
+    .letter {
+      font-family: 'PickleWeasel', sans-serif;
+      font-size: 16vw;
+      font-weight: 900;
+      letter-spacing: -0.025em;
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+      transform: scale(0);
+      opacity: 0;
+      transition: transform 0.8s cubic-bezier(0.34,1.56,0.64,1), opacity 0.4s ease;
+      line-height: 0.9;
+    }
+    .letter-image {
+      display: inline-block;
+      opacity: 0;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      background-size: 300%;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: opacity 0.1s ease, background-position 0.2s ease-out;
+    }
+    .letter-base {
+      position: absolute; inset: 0;
+      color: white;
+      transition: opacity 0.1s ease;
+      pointer-events: none;
+    }
+    .letter-overlay {
+      position: absolute; inset: 0;
+      color: #ef4444;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .letter-overlay.flash {
+      animation: flash-sweep var(--flash-duration, 0.5s) ease-in-out forwards;
+    }
+    @keyframes flash-sweep {
+      0%   { opacity: 0; }
+      10%  { opacity: 1; }
+      70%  { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    .letter:hover .letter-base  { opacity: 0; }
+    .letter:hover .letter-image { opacity: 1; }
+
+    @media (max-width: 768px) {
+  
+      #row-buffalo, #row-studio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+      /* Forces BUFFALO into 4 columns: BUFF on row 1, ALO wraps to row 2 */
+  #row-buffalo {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+  }
+  
+  /* Forces STUDIO into 3 columns: STU on row 1, DIO wraps to row 2 */
+  #row-studio {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+  }
+
+
+
+  /* Increase the font size so the 4 letters fill the screen width */
+  .letter {
+    font-size: 24vw; 
+    line-height: 0.85;
+    text-align: center; /* Adds center alignment to the letters */
+    display: flex;
+    justify-content: center;
+  }
+}
+
+    /* ══════════════════════════════════════════════════════════
+       STUDIO
+    ══════════════════════════════════════════════════════════ */
+    #studio {
+      background: var(--bg);
+      padding: 40px 0 60px;
+      border-top: 0px solid var(--border);
+    }
+    .studio-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 8%;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .studio-iframe-wrap {
+      width: 100%;
+      position: relative;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      border-radius: 0px;
+      background: #000;
+    }
+    .studio-iframe-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+    .studio-copy { min-width: 0; }
+    .accent-red {
+      color: var(--red);
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+    }
+    .accent-red.pulse {
+      animation: redPulse 2.6s ease-in-out infinite;
+    }
+    @keyframes redPulse {
+      0%, 100% { color: var(--red); text-shadow: 0 0 0 rgba(201,79,58,0); transform: translateY(0); }
+      50%      { color: #ff7557; text-shadow: 0 0 14px rgba(201,79,58,0.55); transform: translateY(-1px); }
+    }
+    .studio-eyebrow {
+      font-family: var(--font-d);
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .studio-heading {
+      font-family: var(--font-d);
+      font-size: clamp(3.2rem, 5.5vw, 5.5rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      line-height: 1.0;
+    }
+    .studio-text {
+      font-size: 1.1rem;
+      line-height: 1.85;
+      color: var(--dim);
+      margin-bottom: 52px;
+    }
+    .studio-stats {
+      display: flex;
+      gap: 48px;
+    }
+    .stat-number {
+      font-family: var(--font-d);
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--white);
+      display: block;
+    }
+    .stat-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 4px;
+      display: block;
+    }
+    @media (max-width: 800px) {
+      .studio-inner { grid-template-columns: 1fr; gap: 28px; }
+      .studio-iframe-wrap { aspect-ratio: 16 / 11; max-width: 100%; }
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       GALLERY
+    ══════════════════════════════════════════════════════════ */
+    #gallery {
+      background: var(--bg);
+      padding: 60px 0 50px;
+      border-top: 0px solid var(--border);
+    }
+    #gallery.height-locked {
+      transition: min-height 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .gallery-header {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 8%;
+      margin-bottom: 32px;
+    }
+    .section-title {
+      font-family: var(--font-d);
+      font-size: clamp(3.2rem, 5.5vw, 5.5rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 32px;
+    }
+    .gallery-filters {
+      display: flex;
+      gap: 28px;
+    }
+    .gal-btn {
+      cursor: pointer;
+      opacity: 0.28;
+      transition: opacity 0.35s ease, letter-spacing 0.35s ease;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-family: var(--font-b);
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 0;
+      outline: none;
+    }
+    .gal-btn:hover, .gal-btn.active { opacity: 1; letter-spacing: 0.3em; }
+    .gallery-rule {
+      height: 1px;
+      background: var(--border);
+      max-width: 1200px;
+      margin: 0 auto 20px;
+      width: 84%;
+    }
+    .gallery-grid-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 8%;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+      gap: 9px;
+    }
+    .g-item {
+      aspect-ratio: 1/1;
+      overflow: hidden;
+      background: #111;
+      cursor: pointer;
+    }
+    .g-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.16,1,0.3,1);
+    }
+    .g-item:hover img { transform: scale(1.08); }
+    .hidden { display: none !important; }
+
+    /* Lightbox */
+    #lightbox {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.96);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 7000;
+      cursor: zoom-out;
+      opacity: 0;
+    }
+    #lightbox img {
+      max-width: 90%; max-height: 90%;
+      object-fit: contain;
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       EQUIPMENT
+    ══════════════════════════════════════════════════════════ */
+    #equipment {
+      background: var(--bg-alt);
+      padding: 60px 0;
+      border-top: 0px solid var(--border);
+    }
+    .equipment-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 8%;
+    }
+    .equipment-title {
+      font-family: var(--font-d);
+      font-size: clamp(3rem, 4.5vw, 4.5rem);
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 72px;
+    }
+    .block-wrapper {
+      column-count: 3;
+      column-gap: 56px;
+    }
+    .section-block {
+      break-inside: avoid;
+      margin-bottom: 36px;
+    }
+    .section-block h3 {
+      font-family: var(--font-d);
+      font-size: 0.8rem;
+      color: var(--earth);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin: 0 0 10px;
+      border-bottom: 0px solid #1e1e1e;
+      padding-bottom: 6px;
+    }
+    .section-block ul {
+      list-style: disc;
+      padding-left: 18px;
+    }
+    .section-block li {
+      font-size: 0.78rem;
+      line-height: 1.38;
+      color: var(--dim);
+      margin-bottom: 3px;
+      cursor: default;
+      transition: transform 0.14s ease-out, color 0.14s ease;
+      transform-origin: left center;
+    }
+    @media (max-width: 920px) { .block-wrapper { column-count: 2; } }
+    @media (max-width: 580px) { .block-wrapper { column-count: 1; } }
+
+    /* ══════════════════════════════════════════════════════════
+       JB PILON
+    ══════════════════════════════════════════════════════════ */
+    #jb-pilon {
+      background: var(--bg);
+      padding: 60px 0;
+      border-top: 0px solid var(--border);
+    }
+    .jb-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 8%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .jb-img-wrap {
+      flex-shrink: 0;
+      z-index: 1;
+      position: relative;
+    }
+    .jb-frame {
+      width: 380px;
+      height: 530px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.06);
+      box-shadow: 0 0 80px rgba(0,0,0,0.5);
+    }
+    .jb-frame img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 1.1s ease;
+    }
+    .jb-img-wrap:hover .jb-frame img { transform: scale(1.04); }
+    .jb-content {
+      margin-left: -60px;
+      margin-top: -80px;
+      z-index: 2;
+      position: relative;
+    }
+    .jb-name {
+      font-family: var(--font-d);
+      font-size: clamp(3rem, 5.5vw, 5.5rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 0.85;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+    .jb-role {
+      font-size: 0.65rem;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 40px;
+    }
+    .jb-actions {
+      display: flex;
+      align-items: flex-start;
+      gap: 36px;
+    }
+    .jb-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      border: 1px solid #3a3a3a;
+      color: var(--white);
+      text-decoration: none;
+      flex-shrink: 0;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .jb-arrow:hover { background: var(--white); border-color: var(--white); }
+    .jb-arrow svg { transition: transform 0.3s, color 0.3s; }
+    .jb-arrow:hover svg { transform: rotate(-45deg); color: #000; }
+    .jb-bio p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--dim);
+      max-width: 340px;
+      margin-bottom: 22px;
+    }
+    .jb-socials {
+      display: flex;
+      gap: 18px;
+    }
+    .jb-socials a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .jb-socials a:hover { color: var(--white); }
+    @media (max-width: 860px) {
+      .jb-inner { flex-direction: column; align-items: center; }
+      .jb-content { margin-left: 0; margin-top: -40px; text-align: center; }
+      .jb-frame { width: 260px; height: 360px; }
+      .jb-actions { flex-direction: column; align-items: center; }
+      .jb-bio p { text-align: center; }
+      .jb-socials { justify-content: center; }
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       TESTIMONIALS
+    ══════════════════════════════════════════════════════════ */
+    #testimonials {
+      background: var(--bg);
+      padding: 60px 0;
+      border-top: 0px solid var(--border);
+      overflow: hidden;
+    }
+    .testi-wrap {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 8%;
+    }
+    .testi-ghost {
+      position: absolute;
+      left: -5%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--font-d);
+      font-size: clamp(10rem, 20vw, 22rem);
+      font-weight: 700;
+      color: rgba(255,255,255,0.025);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+      transition: transform 0.3s ease;
+    }
+    .testi-body { display: flex; position: relative; }
+    .testi-sidebar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-right: 44px;
+      border-right: 1px solid var(--border);
+    }
+    .testi-label {
+      font-family: var(--font-b);
+      font-size: 0.58rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.28);
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      margin-bottom: 20px;
+    }
+    .testi-bar {
+      position: relative;
+      height: 120px;
+      width: 1px;
+      background: var(--border);
+    }
+    .testi-fill {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      background: var(--white);
+      transition: height 0.5s ease;
+    }
+    .testi-content {
+      flex: 1;
+      padding: 48px 0 48px 48px;
+    }
+    .testi-author-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-b);
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 16px;
+      margin-bottom: 32px;
+    }
+    .testi-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .testi-quote-area {
+      position: relative;
+      min-height: 160px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 56px;
+    }
+    .testi-quote {
+      position: absolute;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      font-size: clamp(1.8rem, 3.5vw, 3.1rem);
+      font-weight: 300;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      color: var(--white);
+    }
+    .testi-quote.active { opacity: 1; }
+    .testi-footer {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+    .testi-credit {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .testi-credit-line {
+      width: 36px; height: 1px;
+      background: rgba(255,255,255,0.35);
+    }
+    .testi-credit-role {
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 2px;
+    }
+    .testi-credit-name {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--white);
+    }
+    .testi-navs { display: flex; gap: 10px; }
+    .testi-nav-btn {
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: none;
+      color: var(--white);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s, color 0.3s;
+    }
+    .testi-nav-btn:hover { background: var(--white); color: #000; }
+    @media (max-width: 640px) {
+      .testi-sidebar { display: none; }
+      .testi-content { padding-left: 0; }
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       CLIENTS
+    ══════════════════════════════════════════════════════════ */
+    #clients {
+      background: var(--bg-alt);
+      padding: 60px 0;
+      border-top: 0px solid var(--border);
+    }
+    .clients-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 8%;
+    }
+    .clients-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 72px;
+    }
+    .clients-sub {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      max-width: 200px;
+      line-height: 1.7;
+      padding-top: 6px;
+    }
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .client-item {
+      padding: 24px 20px;
+      border-bottom: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      transition: background 0.25s;
+    }
+    .client-item:nth-child(4n) { border-right: none; }
+    .client-item:hover { background: rgba(255,255,255,0.025); }
+    .client-name {
+      font-family: var(--font-d);
+      font-size: 0.88rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--dim);
+      transition: color 0.25s;
+    }
+    .client-item:hover .client-name { color: var(--white); }
+    .client-genre {
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 5px;
+    }
+    @media (max-width: 720px) {
+      .clients-grid { grid-template-columns: repeat(2, 1fr); }
+      .client-item:nth-child(4n) { border-right: 1px solid var(--border); }
+      .client-item:nth-child(2n) { border-right: none; }
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       CONTACT
+    ══════════════════════════════════════════════════════════ */
+    #contact {
+      background: var(--bg);
+      padding: 110px 0;
+      border-top: 0px solid var(--border);
+    }
+    .contact-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 8%;
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .contact-eyebrow {
+      font-family: var(--font-d);
+      font-size: 0.62rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .contact-title {
+      font-family: var(--font-d);
+      font-size: clamp(3.2rem, 5.5vw, 5.5rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      line-height: 1.0;
+      margin-bottom: 24px;
+    }
+    .contact-desc {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--dim);
+      margin-bottom: 48px;
+      max-width: 320px;
+    }
+    .info-item { margin-bottom: 24px; }
+    .info-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .info-value {
+      font-size: 1rem;
+      color: var(--white);
+    }
+    .info-value a {
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .info-value a:hover { color: var(--accent); }
+    .contact-form { display: flex; flex-direction: column; gap: 22px; }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+    .form-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .form-input, .form-select, .form-textarea {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      color: var(--white);
+      font-family: var(--font-b);
+      font-size: 0.88rem;
+      padding: 11px 0;
+      outline: none;
+      width: 100%;
+      -webkit-appearance: none;
+      appearance: none;
+      transition: border-color 0.3s;
+    }
+    .form-input::placeholder, .form-textarea::placeholder { color: rgba(255,255,255,0.18); }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: rgba(255,255,255,0.6);
+    }
+    .form-textarea { resize: none; min-height: 110px; }
+    .form-select option { background: #1a1a1a; color: var(--white); }
+    .form-submit {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: none;
+      border: 1px solid rgba(255,255,255,0.22);
+      color: var(--white);
+      font-family: var(--font-d);
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 15px 30px;
+      cursor: pointer;
+      transition: background 0.3s, border-color 0.3s, color 0.3s;
+      align-self: flex-start;
+    }
+    .form-submit:hover { background: var(--white); color: #000; border-color: var(--white); }
+    .form-submit svg { transition: transform 0.3s; }
+    .form-submit:hover svg { transform: translateX(4px); }
+    @media (max-width: 760px) {
+      .contact-inner { grid-template-columns: 1fr; gap: 56px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       MARQUEE
+    ══════════════════════════════════════════════════════════ */
+    #marquee-section {
+      background: var(--bg);
+      border-top: 0px solid var(--border);
+      /* Generous vertical breathing room above/below the marquee
+         so it reads as its own beat in the page flow. */
+      padding: 90px 0;
+      margin: 40px 0;
+      overflow: hidden;
+      cursor: default;
+      user-select: none;
+    }
+    @media (max-width: 640px) {
+      #marquee-section { padding: 60px 0; margin: 24px 0; }
+    }
+    .marquee-track {
+      display: flex;
+      white-space: nowrap;
+      will-change: transform;
+    }
+    .marquee-item {
+      font-family: var(--font-d);
+      font-size: 6vw;
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      padding-right: 3vw;
+      flex-shrink: 0;
+      line-height: 1;
+      opacity: 0.92;
+    }
+    .marquee-item .dot {
+      color: var(--accent);
+      margin: 0 1.5vw;
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════════════════════════ */
+    footer {
+      background: var(--bg-alt);
+      border-top: 0px solid var(--border);
+      padding: 56px 0 36px;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 8%;
+    }
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 44px;
+    }
+    .footer-logo {
+      font-family: var(--font-d);
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+    .footer-logo span { color: var(--accent); }
+    .footer-location {
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 7px;
+    }
+    .footer-nav {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .footer-nav a {
+      font-family: var(--font-d);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-nav a:hover { color: var(--white); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+    }
+    .footer-copy {
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+    }
+    .footer-socials { display: flex; gap: 18px; }
+    .footer-socials a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer-socials a:hover { color: var(--white); }
+    @media (max-width: 580px) {
+      .footer-top { flex-direction: column; gap: 28px; }
+      .footer-bottom { flex-direction: column; gap: 14px; text-align: center; }
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       ░░  RESPONSIVE OVERHAUL + SECTION REDESIGNS  ░░
+       ── Everything below this banner overrides or extends the
+          styles above. Kept at the end of the stylesheet so the
+          cascade does the work and the original declarations
+          remain readable for reference.
+    ══════════════════════════════════════════════════════════ */
+
+    /* ── Safety net: prevent any horizontal overflow on mobile.
+       Paired with body { overflow-x: hidden } further up. */
+    html, body { max-width: 100%; }
+    img, svg, video { max-width: 100%; height: auto; }
+
+    /* ══════════════════════════════════════════════════════════
+       GALLERY — force a 3-column grid on mobile viewports.
+       The desktop auto-fill grid stays intact; only phones get
+       the fixed 4-col treatment, with smaller gaps so tiles
+       stay sharp at small sizes.
+    ══════════════════════════════════════════════════════════ */
+    @media (max-width: 640px) {
+      .gallery-grid-wrap { padding: 0 4%; }
+      .gallery-grid {
+        /* 4 equal columns — each cell keeps its 1:1 aspect ratio */
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 4px;
+      }
+      .gallery-header { padding: 0 5%; }
+      .gallery-filters {
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .gal-btn { font-size: 0.7rem; letter-spacing: 0.14em; }
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       EQUIPMENT — extendable (Show More) list on mobile.
+       On >= 760px the full list renders as before.
+       On < 760px only the first 3 items per block are visible
+       until the user taps the toggle. We key off the
+       body[data-equip-expanded="true"] attribute set by JS.
+    ══════════════════════════════════════════════════════════ */
+    .equip-toggle-wrap {
+      display: none;               /* hidden on desktop */
+      justify-content: center;
+      margin-top: 12px;
+    }
+    .equip-toggle {
+      background: transparent;
+      border: 1px solid var(--border-strong);
+      color: var(--white);
+      font-family: var(--font-d);
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 14px 26px;
+      cursor: pointer;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.3s, color 0.3s, border-color 0.3s;
+    }
+    .equip-toggle:hover,
+    .equip-toggle:focus-visible {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #000;
+      outline: none;
+    }
+    .equip-toggle .chev {
+      transition: transform 0.3s ease;
+    }
+    body[data-equip-expanded="true"] .equip-toggle .chev {
+      transform: rotate(180deg);
+    }
+
+    @media (max-width: 760px) {
+      /* Single column list on mobile so each block reads clearly */
+      .block-wrapper { column-count: 1 !important; }
+
+      /* Hide every <li> beyond the 3rd in each block by default. */
+      .section-block li:nth-child(n+4) { display: none; }
+
+      /* When expanded, show them all. */
+      body[data-equip-expanded="true"] .section-block li:nth-child(n+4) {
+        display: list-item;
+      }
+
+      /* Show the toggle only on mobile */
+      .equip-toggle-wrap { display: flex; }
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       TESTIMONIALS — redesigned as a card slider.
+       High-impact typography, scroll-snap carousel on mobile,
+       single active card with peek on desktop.
+    ══════════════════════════════════════════════════════════ */
+    #testimonials {
+      padding: 60px 0;
+      position: relative;
+    }
+    .testi-head {
+      max-width: 1200px;
+      margin: 0 auto 56px;
+      padding: 0 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .testi-eyebrow {
+      font-family: var(--font-d);
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+    .testi-title {
+      font-family: var(--font-d);
+      font-size: clamp(3rem, 5.5vw, 5.5rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      line-height: 0.95;
+    }
+    .testi-title em {
+      font-style: normal;
+      color: var(--accent);
+    }
+    .testi-cards {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 8%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+    .testi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 44px 40px 36px;
+      position: relative;
+      transition: transform 0.45s cubic-bezier(0.2,0.8,0.2,1),
+                  border-color 0.3s, background 0.3s;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      overflow: hidden;
+    }
+    .testi-card::before {
+      /* Oversized quotation mark as a graphic flourish */
+      content: "\201C";
+      position: absolute;
+      top: -30px;
+      right: 18px;
+      font-family: var(--font-d);
+      font-size: 12rem;
+      line-height: 1;
+      color: var(--accent);
+      opacity: 0.12;
+      pointer-events: none;
+    }
+    .testi-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent);
+      background: var(--bg-elev);
+    }
+    .testi-card-quote {
+      font-family: var(--font-b);
+      font-size: 1.15rem;
+      line-height: 1.55;
+      color: var(--white);
+      font-weight: 400;
+    }
+    .testi-card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      gap: 16px;
+    }
+    .testi-card-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .testi-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), #b34600);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-d);
+      font-weight: 700;
+      color: #000;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
+    }
+    .testi-card-name {
+      font-family: var(--font-d);
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+    .testi-card-index {
+      font-family: var(--font-d);
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      color: var(--muted);
+    }
+    @media (max-width: 820px) {
+      .testi-cards { grid-template-columns: 1fr; }
+      .testi-card { padding: 36px 28px 28px; }
+      .testi-card-quote { font-size: 1.05rem; }
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       CLIENTS — editorial list inspired by jbpilon.com.
+       Large rows, numeric index, hover slides the name and
+       reveals the orange accent bar.
+    ══════════════════════════════════════════════════════════ */
+    #clients { padding: 60px 0; }
+    /* Stack the title and subtitle on narrow screens so they
+       don't overlap inside the flex container. */
+    @media (max-width: 640px) {
+      .clients-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        margin-bottom: 40px;
+      }
+      .clients-sub { max-width: 100%; }
+    }
+    .clients-list {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 8%;
+      border-top: 1px solid var(--border);
+    }
+    .client-row {
+      display: grid;
+      grid-template-columns: 60px 1fr auto 40px;
+      align-items: center;
+      gap: 24px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      cursor: default;
+      transition: padding 0.3s ease;
+    }
+    .client-row::before {
+      /* Left-edge accent bar that expands on hover */
+      content: "";
+      position: absolute;
+      left: -8%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--accent);
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.45s cubic-bezier(0.2,0.8,0.2,1);
+    }
+    .client-row:hover::before { transform: scaleY(1); }
+    .client-row:hover { padding-left: 20px; }
+
+    .client-index {
+      font-family: var(--font-d);
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+    }
+    .client-row-name {
+      font-family: var(--font-d);
+      font-size: clamp(1.6rem, 3vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--dim);
+      transition: color 0.3s, letter-spacing 0.3s;
+      line-height: 1;
+    }
+    .client-row:hover .client-row-name {
+      color: var(--white);
+      letter-spacing: 0.04em;
+    }
+    .client-row-genre {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .client-row-arrow {
+      color: var(--muted);
+      opacity: 0;
+      transform: translateX(-8px);
+      transition: opacity 0.3s, transform 0.3s, color 0.3s;
+    }
+    .client-row:hover .client-row-arrow {
+      color: var(--accent);
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    @media (max-width: 640px) {
+      .client-row {
+        grid-template-columns: 40px 1fr;
+        gap: 16px;
+        padding: 22px 0;
+      }
+      .client-row-genre { grid-column: 2; margin-top: 4px; }
+      .client-row-arrow { display: none; }
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       CONTACT — redesigned. Card-based form with strong focus
+       states, floating-label fields, and a bold orange CTA.
+    ══════════════════════════════════════════════════════════ */
+    #contact { padding: 140px 0; }
+    .contact-inner {
+      /* Override the grid from the original rules */
+      grid-template-columns: 1fr 1.2fr;
+      gap: 72px;
+    }
+    .contact-form-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 48px 44px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    /* Floating-label wrapper: the label sits inside the field
+       and lifts when the input is focused or filled. */
+    .field {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .field .form-input,
+    .field .form-textarea,
+    .field .form-select {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: var(--white);
+      font-family: var(--font-b);
+      font-size: 0.95rem;
+      padding: 22px 16px 14px;
+      outline: none;
+      transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
+      width: 100%;
+    }
+    .field .form-textarea { min-height: 130px; resize: vertical; }
+    .field .form-select { appearance: none; -webkit-appearance: none; cursor: pointer; }
+    .field .form-label {
+      position: absolute;
+      left: 16px;
+      top: 18px;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      pointer-events: none;
+      transition: transform 0.2s ease, color 0.2s ease, font-size 0.2s ease;
+      background: transparent;
+    }
+    .field .form-input:focus,
+    .field .form-textarea:focus,
+    .field .form-select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-soft);
+      background: rgba(255,255,255,0.01);
+    }
+    /* Lift the label when the field is focused or non-empty
+       (:not(:placeholder-shown) covers the filled state). */
+    .field .form-input:focus + .form-label,
+    .field .form-input:not(:placeholder-shown) + .form-label,
+    .field .form-textarea:focus + .form-label,
+    .field .form-textarea:not(:placeholder-shown) + .form-label,
+    .field .form-select:focus + .form-label,
+    .field .form-select:valid + .form-label {
+      transform: translateY(-14px);
+      font-size: 0.6rem;
+      color: var(--accent);
+      letter-spacing: 0.22em;
+    }
+    /* Keep placeholder invisible so the floating label owns
+       the "empty state" messaging. */
+    .field .form-input::placeholder,
+    .field .form-textarea::placeholder { color: transparent; }
+
+    .contact-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--accent);
+      border: 1px solid var(--accent);
+      color: #000;
+      font-family: var(--font-d);
+      font-size: 0.85rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 18px 30px;
+      cursor: pointer;
+      border-radius: 999px;
+      transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+      align-self: flex-start;
+      font-weight: 700;
+    }
+    .contact-cta:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px -10px var(--accent);
+    }
+    .contact-cta:focus-visible {
+      outline: 2px solid var(--white);
+      outline-offset: 3px;
+    }
+    .contact-cta svg { transition: transform 0.25s; }
+    .contact-cta:hover svg { transform: translateX(5px); }
+
+    @media (max-width: 820px) {
+      .contact-inner { grid-template-columns: 1fr !important; gap: 48px; }
+      .contact-form-card { padding: 32px 22px; }
+      .form-row { grid-template-columns: 1fr !important; }
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       MOBILE NIPS & TUCKS — catch-all adjustments so nothing
+       overflows or gets clipped on small viewports.
+    ══════════════════════════════════════════════════════════ */
+    @media (max-width: 640px) {
+      #studio, #equipment, #jb-pilon, #clients, #contact, #testimonials {
+        padding: 40px 0;
+      }
+      .studio-inner, .equipment-inner, .jb-inner,
+      .clients-inner, .contact-inner, .testi-head, .testi-cards {
+        padding-left: 6%;
+        padding-right: 6%;
+      }
+      .section-title, .contact-title, .studio-heading, .testi-title, .jb-name {
+        font-size: clamp(2.4rem, 9vw, 3.4rem);
+      }
+      #layered-container { font-size: 40px; }
+  .layered-li, .layered-li p { height: 45px; line-height: 40px; }
+      .equipment-title { margin-bottom: 40px; }
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       ░░  V2 PASS — mobile menu kill, bigger/bolder type,
+           palette rebalance (less orange, more green/yellow/red),
+           flatter Testimonials & Contact, new Clients logo wall.
+       ══════════════════════════════════════════════════════════ */
+
+    /* ── MOBILE: remove the pop-up navigation ─────────────────── */
+    @media (max-width: 820px) {
+      #menu-trigger,
+      #menu-overlay { display: none !important; }
+      /* Keep the BOOK button but slide it into the top-right so
+         it's the sole persistent CTA on mobile. */
+      #book-btn { right: 24px; }
+    }
+
+    /* ── TYPOGRAPHY SCALE — bigger + bolder ────────────────────
+       Intentionally excluded from this pass per request:
+         .equipment-title   – kept at original size
+         .equipment-inner li – kept at original size
+         .marquee-item      – kept at original size
+         #gallery .section-title – kept at original size
+    ───────────────────────────────────────────────────────────── */
+    body { font-weight: 500; }
+
+    /* Studio */
+    .studio-heading { font-size: clamp(4rem, 7vw, 7.5rem); font-weight: 900; }
+    .studio-text { font-size: 1.35rem; line-height: 1.7; font-weight: 500; color: #d8d8d8; }
+    .stat-number { font-size: 2.4rem; font-weight: 900; }
+    .stat-label  { font-size: 0.72rem; }
+
+    /* Section titles (gallery is excluded by a more-specific rule below) */
+    .section-title,
+    .contact-title,
+    .testi-title,
+    .jb-name {
+      font-size: clamp(3.8rem, 7vw, 7rem);
+      font-weight: 900;
+      letter-spacing: 0.02em;
+    }
+    /* Preserve the gallery title at its current size (exclusion) */
+    #gallery .section-title {
+      font-size: clamp(3.2rem, 5.5vw, 5.5rem);
+      font-weight: 700;
+    }
+
+    /* JB bio */
+    .jb-bio p { font-size: 1.2rem; line-height: 1.7; font-weight: 500; color: #d8d8d8; }
+    .jb-role  { font-size: 0.75rem; letter-spacing: 0.4em; }
+
+    /* Contact copy */
+    .contact-desc { font-size: 1.25rem; line-height: 1.65; font-weight: 500; color: #d8d8d8; }
+    .info-value   { font-size: 1.15rem; font-weight: 600; }
+    .info-label   { font-size: 0.68rem; }
+
+    /* Menu links (desktop) slightly bolder */
+    .flip-link { font-weight: 900; }
+
+    /* ── PALETTE REBALANCE ──────────────────────────────────────
+       Shift big splashes of orange to the green/yellow/red set.
+       Orange is now reserved for tiny dots and micro-highlights. */
+
+    /* Book button */
+    #book-btn { color: var(--green); }
+    #book-btn:hover { color: var(--white); }
+
+    /* Layered text between gallery & equipment: yellow now */
+    #layered-text-section,
+    #layered-container,
+    #layered-container p { color: var(--yellow) !important; }
+
+    /* Menu flip-bottom letters */
+    .flip-bottom { color: var(--green); }
+
+    /* Hero letter overlay flash — restored to the original
+       orange/red flourish so the title reveal keeps its punch. */
+    .letter-overlay { color: var(--red); }
+
+    /* Marquee dots — back to orange (per request) */
+    .marquee-item .dot { color: var(--accent) !important; }
+
+    /* Footer logo dot (was orange) → green */
+    .footer-logo span { color: var(--green); }
+
+    /* Info-value hover */
+    .info-value a:hover { color: var(--green); }
+
+    /* Testimonials eyebrow was orange → green */
+    .testi-eyebrow { color: var(--green); }
+
+    /* Equipment h3 headings — tint mixture (keeps list itself untouched) */
+    .section-block h3 { color: var(--green); }
+
+    /* ── TESTIMONIALS — slider, flatter, no orange ──────────────
+       Renders one quote at a time. Uses scroll-snap on the track
+       and prev/next buttons. Big, bold quote text. */
+    #testimonials { padding: 140px 0; background: var(--bg); }
+    .testi-head { margin-bottom: 72px; }
+    .testi-eyebrow {
+      font-family: var(--font-d);
+      font-size: 0.75rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .testi-title { line-height: 0.92; }
+    .testi-title em { font-style: normal; color: var(--yellow); }
+
+    /* Override the old card grid styles: we'll use a slider */
+    .testi-cards {
+      display: block !important;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 8%;
+      position: relative;
+    }
+    .testi-slider-viewport {
+      overflow: hidden;
+      position: relative;
+      border-top: 2px solid var(--white);
+      border-bottom: 2px solid var(--white);
+      padding: 72px 0;
+    }
+    .testi-slider-track {
+      display: flex;
+      transition: transform 0.65s cubic-bezier(0.2,0.8,0.2,1);
+      will-change: transform;
+    }
+    .testi-slide {
+      flex: 0 0 100%;
+      padding: 0 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+    /* Big bold quote — flat, no card, no rounds, no orange */
+    .testi-slide-quote {
+      font-family: var(--font-b);
+      font-size: clamp(1.6rem, 3.2vw, 3rem);
+      line-height: 1.2;
+      letter-spacing: -0.015em;
+      font-weight: 700;
+      color: var(--white);
+      max-width: 1000px;
+    }
+    .testi-slide-quote .pw {
+      color: var(--green);
+      font-size: 1.15em;
+      vertical-align: -0.05em;
+    }
+    .testi-slide-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+    }
+    .testi-slide-author {
+      font-family: var(--font-d);
+      font-size: 1.15rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 900;
+      color: var(--white);
+    }
+    .testi-slide-author::before {
+      content: "— ";
+      color: var(--green);
+    }
+    .testi-slide-idx {
+      font-family: var(--font-d);
+      font-size: 0.85rem;
+      letter-spacing: 0.25em;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .testi-slide-idx b { color: var(--white); }
+
+    /* Navigation row under the slider */
+    .testi-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 32px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .testi-dots {
+      display: flex;
+      gap: 10px;
+    }
+    .testi-dot-btn {
+      width: 34px;
+      height: 4px;
+      background: var(--border-strong);
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: background 0.3s, width 0.3s;
+    }
+    .testi-dot-btn.active { background: var(--green); width: 56px; }
+    .testi-dot-btn:hover { background: var(--green); }
+
+    .testi-nav {
+      display: flex;
+      gap: 0;
+      border: 2px solid var(--white);
+    }
+    .testi-nav-btn {
+      width: 56px;
+      height: 56px;
+      border: none;
+      background: transparent;
+      color: var(--white);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.25s, color 0.25s;
+    }
+    .testi-nav-btn + .testi-nav-btn { border-left: 2px solid var(--white); }
+    .testi-nav-btn:hover { background: var(--yellow); color: #000; }
+
+    @media (max-width: 640px) {
+      .testi-slider-viewport { padding: 48px 0; }
+      .testi-slide-quote { font-size: clamp(1.3rem, 5.5vw, 1.8rem); font-weight: 700; }
+    }
+
+    /* ── CONTACT — flatter, bolder, less orange ──────────────── */
+    #contact { padding: 140px 0; }
+    .contact-title em { font-style: normal; color: var(--yellow); }
+    .contact-eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.4em;
+      color: var(--green);
+      font-weight: 700;
+    }
+    .contact-form-card {
+      background: var(--bg);
+      border: 2px solid var(--white);
+      border-radius: 0 !important;     /* Flat, no rounds */
+      padding: 40px 40px;
+      gap: 28px;
+    }
+    .field .form-input,
+    .field .form-textarea,
+    .field .form-select {
+      border: none;
+      border-bottom: 2px solid var(--border-strong);
+      border-radius: 0 !important;
+      background: transparent;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 26px 4px 12px;
+    }
+    .field .form-label {
+      left: 4px;
+      top: 22px;
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+    }
+    .field .form-input:focus,
+    .field .form-textarea:focus,
+    .field .form-select:focus {
+      border-color: var(--yellow);
+      box-shadow: none;
+      background: transparent;
+    }
+    .field .form-input:focus + .form-label,
+    .field .form-input:not(:placeholder-shown) + .form-label,
+    .field .form-textarea:focus + .form-label,
+    .field .form-textarea:not(:placeholder-shown) + .form-label,
+    .field .form-select:focus + .form-label,
+    .field .form-select:valid + .form-label {
+      transform: translateY(-16px);
+      color: var(--yellow);
+      font-size: 0.62rem;
+      letter-spacing: 0.3em;
+    }
+    /* CTA — flat rectangle, yellow, bold */
+    .contact-cta {
+      border-radius: 0 !important;
+      background: var(--yellow);
+      border: 2px solid var(--yellow);
+      color: #000;
+      font-weight: 900;
+      font-size: 0.95rem;
+      letter-spacing: 0.3em;
+      padding: 22px 36px;
+    }
+    .contact-cta:hover {
+      background: #000;
+      color: var(--yellow);
+      border-color: var(--yellow);
+      transform: none;
+      box-shadow: 6px 6px 0 var(--yellow);
+    }
+
+    /* Catchy intro under the contact title */
+    .contact-catch {
+      font-family: var(--font-b);
+      font-size: clamp(1.4rem, 2.4vw, 2rem);
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--white);
+      margin-bottom: 32px;
+      max-width: 420px;
+    }
+    .contact-catch .pw {
+      color: var(--green);
+      font-size: 1.6em;
+      vertical-align: -0.05em;
+      margin: 0 2px;
+    }
+
+    /* ── CLIENTS LOGO WALL (user-supplied spec) ─────────────── */
+    .clients-section {
+      background:
+        radial-gradient(ellipse at 18% 10%, rgba(143,174,106,0.22), transparent 55%),
+        radial-gradient(ellipse at 82% 85%, rgba(201,79,58,0.20), transparent 55%),
+        radial-gradient(ellipse at 50% 100%, rgba(255,204,0,0.12), transparent 60%),
+        #000;
+      padding: 60px 52px 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .clients-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 54px 54px;
+      pointer-events: none;
+      opacity: 0.45;
+    }
+    .clients-section .clients-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      /* Override the generic padding from the original .clients-inner */
+      padding: 0;
+    }
+    .clients-big-title {
+      font-family: var(--ff-d);
+      font-weight: 900;
+      font-style: italic;
+      font-size: clamp(32px, 4vw, 56px);
+      color: var(--cr);
+      line-height: 0.9;
+      letter-spacing: -0.03em;
+      margin-bottom: 48px;
+      white-space: nowrap;
+      position: relative;
+    }
+    .clients-big-title .tint-green { color: var(--green); font-style: normal; }
+    .clients-big-title .tint-red   { color: var(--red); font-style: normal; }
+    .clients-title-dot { color: var(--yellow); font-style: normal; }
+    .clients-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      align-items: left;
+      justify-content: left;
+    }
+    .cl {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+    }
+    .cl img {
+      max-width: 220px;
+      max-height: 100px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      mix-blend-mode: screen;
+      filter: grayscale(100%) brightness(1.05);
+      transition: transform .3s cubic-bezier(.34,1.56,.64,1), filter .35s ease;
+    }
+    .cl img:hover { transform: scale(1.25); filter: grayscale(0%) brightness(1.1); }
+    .cl { position: relative; z-index: 1; }
+    @media (max-width: 960px) {
+      .clients-big-title {
+        font-size: clamp(44px, 10vw, 72px);
+        margin-bottom: 40px;
+        white-space: normal;
+      }
+      .cl img { max-width: 150px; max-height: 72px; }
+      .cl { padding: 6px 14px; }
+    }
+    @media (max-width: 540px) {
+      .cl img { max-width: 110px; max-height: 54px; }
+      .cl { padding: 6px 10px; }
+      .clients-section { padding: 72px 20px 88px; }
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       ░░  V3 PASS — title sizing fixes, vertical SPACE,
+           tighter JB stack, cleaner slider buttons,
+           clients side margins.
+       ══════════════════════════════════════════════════════════ */
+
+    /* ── STUDIO: stacked "THE SPACE" with vertical SPACE ───────
+       Layout:
+         [THE]   [SPACE rotated -90°]
+         [body text]
+       The whole heading becomes a grid so SPACE occupies a tall
+       narrow column to the right of "THE" and the body copy
+       flows underneath with minimal breathing room. */
+    .studio-inner { gap: 100px; }
+    .studio-heading--stacked {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto;
+      align-items: start;
+      column-gap: 18px;
+      margin-bottom: 18px;
+      line-height: 0.9;
+    }
+    .studio-heading--stacked .studio-the {
+      font-family: var(--font-d);
+      font-size: clamp(2.6rem, 4.2vw, 4.4rem);
+      font-weight: 900;
+      line-height: 0.9;
+      color: var(--white);
+      padding-top: 4px;
+    }
+    .studio-heading--stacked .studio-space {
+      font-family: var(--font-pw);
+      color: var(--green);
+      /* Rotated 90° counter-clockwise so SPACE reads vertically. */
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: clamp(5.5rem, 10vw, 9.5rem);
+      line-height: 0.8;
+      letter-spacing: -0.02em;
+    }
+    /* Bring the body text closer on desktop where the grid has
+       room to breathe; tightens the visual relationship. */
+    .studio-inner .studio-text {
+      margin-top: 0;
+      margin-bottom: 36px;
+      line-height: 1.55;
+    }
+    @media (max-width: 640px) {
+      .studio-heading--stacked .studio-the  { font-size: clamp(2rem, 9vw, 3rem); }
+      .studio-heading--stacked .studio-space { font-size: clamp(4.5rem, 18vw, 7rem); }
+    }
+
+    /* ── JB PILON: tight stacked name, less space between lines
+       of the bio, PickleWeasel on both words. */
+    .jb-name--stacked {
+      display: flex;
+      flex-direction: column;
+      line-height: 0.78;             /* super-tight stack */
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+      gap: 0;
+    }
+    .jb-name--stacked .pw {
+      font-size: clamp(4.5rem, 9vw, 8rem);
+      line-height: 0.78;
+    }
+    /* Tighten the neighbour copy */
+    .jb-role { margin-bottom: 22px; }
+    .jb-bio p {
+      line-height: 1.4 !important;
+      margin-bottom: 14px !important;
+    }
+
+    /* ── TESTIMONIALS: dial the title back, fix the nav ───────
+       Old version used pw--xxl (1.7em × 7rem) which blew up to
+       12rem. V2 sets an explicit, sensible size. */
+    .testi-title.testi-title--v2 {
+      font-size: clamp(2.4rem, 4.8vw, 4.2rem) !important;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: 0.02em;
+    }
+    .testi-title-loud {
+      color: var(--yellow);
+      font-size: 1.2em;              /* small bump, not a blow-up */
+      vertical-align: -0.02em;
+    }
+
+    /* Slider buttons — replace the buggy split-border treatment
+       with two plain square buttons + a small gap. Easier to
+       style, easier to click, no overlapping border quirks. */
+    .testi-nav {
+      border: none !important;
+      gap: 10px;
+    }
+    .testi-nav-btn {
+      border: 2px solid var(--white) !important;
+      border-left-width: 2px !important;
+      background: transparent;
+    }
+    .testi-nav-btn:hover {
+      background: var(--yellow);
+      border-color: var(--yellow) !important;
+      color: #000;
+    }
+    .testi-nav-btn:focus-visible {
+      outline: 2px solid var(--yellow);
+      outline-offset: 3px;
+    }
+    /* Cancel the old ".testi-nav-btn + .testi-nav-btn" rule */
+    .testi-nav-btn + .testi-nav-btn { border-left: 2px solid var(--white) !important; }
+
+    /* ── CONTACT: dial title back ───────────────────────────── */
+    .contact-title.contact-title--v2 {
+      font-size: clamp(2.6rem, 5vw, 4.6rem) !important;
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: 0.01em;
+      margin-bottom: 20px;
+    }
+    .contact-title-loud {
+      color: var(--white);
+      font-size: 1.35em;             /* accent, not oversized */
+      vertical-align: -0.04em;
+    }
+    .contact-catch {
+      font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+      font-weight: 800;
+      line-height: 1.35;
+      margin-bottom: 22px;
+      max-width: 420px;
+    }
+    .contact-catch-accent {
+      color: var(--green);
+      font-size: 1.3em;
+      vertical-align: -0.05em;
+    }
+    .contact-desc {
+      font-size: 1.1rem !important;
+      line-height: 1.55 !important;
+      margin-bottom: 40px !important;
+    }
+
+    /* ── CLIENTS: match the 1200px container width used by the
+       rest of the page so the logo wall reads as part of the
+       same column, not a wider full-bleed band. */
+    #clients.clients-section {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    #clients.clients-section .clients-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 8%;
+    }
+    @media (max-width: 640px) {
+      #clients.clients-section .clients-inner {
+        padding: 0 6%;
+      }
+      #clients.clients-section { padding-top: 50px; padding-bottom: 50px; }
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       ░░  V4 PASS — buffalo parallax, contact popup, JB widen,
+           testimonials cleanup, menu socials, bolder footer.
+       ══════════════════════════════════════════════════════════ */
+
+    /* ── BUFFALO PARALLAX ─────────────────────────────────────
+       Fixed background image sits between Gallery and Equipment.
+       As the user scrolls the section, the image appears to stay
+       in place; neighbouring sections (opaque black) cover it on
+       exit, producing the reveal / hide effect. */
+    #buffalo-parallax {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      min-height: 520px;
+      background-image: url('assets/buffalo.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-color: #000;
+    }
+    /* iOS Safari ignores background-attachment: fixed. Fall back
+       to a scrolling cover image there; the reveal-on-scroll
+       impression is still reasonable. */
+    @supports (-webkit-touch-callout: none) {
+      #buffalo-parallax { background-attachment: scroll; }
+    }
+    @media (max-width: 768px) {
+      #buffalo-parallax { height: 60vh; min-height: 380px; }
+    }
+
+    /* ── JB PILON — widen to match the 1200px column ─────────
+       Originally used `justify-content: center`, which left the
+       image and content hugging the middle even on wide screens.
+       Swap to a space-between layout anchored at the container
+       edges so the section reads at the same width as the rest. */
+    .jb-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+    }
+    .jb-content {
+      margin-left: 0;
+      margin-top: 0;
+      flex: 1;
+      max-width: 640px;
+    }
+    .jb-bio p { max-width: none; }
+    @media (max-width: 860px) {
+      .jb-inner { flex-direction: column; align-items: center; gap: 32px; }
+      .jb-content { text-align: center; max-width: 100%; }
+    }
+
+    /* ── TESTIMONIALS — remove top/bottom white borders,
+         switch nav buttons to round + thin outline like the
+         menu trigger button. */
+    .testi-slider-viewport {
+      border-top: none;
+      border-bottom: none;
+    }
+    .testi-nav {
+      border: none !important;
+      gap: 12px;
+    }
+    .testi-nav-btn,
+    .testi-nav-btn + .testi-nav-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50% !important;
+      border: 1px solid rgba(255,255,255,0.2) !important;
+      background: rgba(10,10,10,0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: var(--white);
+      transition: border-color 0.3s, background 0.3s, color 0.3s;
+    }
+    .testi-nav-btn:hover {
+      background: rgba(30,30,30,0.9) !important;
+      border-color: rgba(255,255,255,0.5) !important;
+      color: var(--white) !important;
+    }
+
+    /* ── MENU OVERLAY SOCIALS ─────────────────────────────────
+       Pinned bottom-left of the overlay, echoing the left-edge
+       alignment of the flip links. */
+    .menu-socials {
+      position: absolute;
+      left: 10vw;
+      bottom: 8vh;
+      display: flex;
+      gap: 22px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
+    }
+    #menu-overlay.open .menu-socials {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .menu-socials a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--white);
+      transition: background 0.3s, border-color 0.3s, transform 0.3s;
+    }
+    .menu-socials a:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.5);
+      transform: translateY(-2px);
+    }
+
+    /* ── CONTACT POPUP — same frosted-glass shell as the menu
+         overlay. Triggered by the BOOK button. Uses visibility
+         toggle (no transition on opacity) so the dialog is
+         either fully shown or fully hidden — simpler than the
+         opacity-fade approach which proved flaky here. */
+    #contact-popup {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 10, 10, 0.9);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      z-index: 10000;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      overflow-y: auto;
+      display: none;
+    }
+    #contact-popup.open {
+      display: flex;
+      animation: popupIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    @keyframes popupIn {
+      from { opacity: 0; transform: scale(0.98); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    .contact-popup-inner {
+      width: 100%;
+      max-width: 640px;
+      margin: auto;
+    }
+    .contact-popup-eyebrow {
+      font-family: var(--font-d);
+      font-size: 0.75rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--green);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .contact-popup-title {
+      font-family: var(--font-d);
+      font-size: clamp(2.6rem, 5vw, 4.6rem);
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: 0.01em;
+      color: var(--white);
+      margin-bottom: 28px;
+      text-transform: uppercase;
+    }
+    .contact-popup-title em {
+      font-style: normal;
+      color: var(--red);
+    }
+    #contact-popup-form {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+    #contact-popup-form .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+    @media (max-width: 640px) {
+      #contact-popup-form .form-row { grid-template-columns: 1fr; }
+    }
+    #contact-popup-form .field .form-input,
+    #contact-popup-form .field .form-textarea,
+    #contact-popup-form .field .form-select {
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid rgba(255,255,255,0.22);
+      border-radius: 0;
+      color: var(--white);
+      font-family: var(--font-b);
+      font-size: 1.05rem;
+      font-weight: 600;
+      padding: 26px 4px 12px;
+      width: 100%;
+      outline: none;
+      transition: border-color 0.25s;
+    }
+    #contact-popup-form .field .form-textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+    #contact-popup-form .field .form-label {
+      position: absolute;
+      left: 4px;
+      top: 22px;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      pointer-events: none;
+      transition: transform 0.2s ease, color 0.2s ease, font-size 0.2s ease;
+    }
+    #contact-popup-form .field .form-input:focus,
+    #contact-popup-form .field .form-textarea:focus,
+    #contact-popup-form .field .form-select:focus {
+      border-color: var(--white);
+    }
+    #contact-popup-form .field .form-input:focus + .form-label,
+    #contact-popup-form .field .form-input:not(:placeholder-shown) + .form-label,
+    #contact-popup-form .field .form-textarea:focus + .form-label,
+    #contact-popup-form .field .form-textarea:not(:placeholder-shown) + .form-label,
+    #contact-popup-form .field .form-select:focus + .form-label,
+    #contact-popup-form .field .form-select:valid + .form-label {
+      transform: translateY(-16px);
+      color: var(--white);
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+    }
+    #contact-popup-form .contact-cta {
+      align-self: flex-start;
+      background: var(--red);
+      border: 2px solid var(--red);
+      color: #000;
+      font-family: var(--font-d);
+      font-weight: 900;
+      font-size: 0.95rem;
+      letter-spacing: 0.3em;
+      padding: 22px 36px;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      transition: background 0.25s, color 0.25s, box-shadow 0.25s;
+    }
+    #contact-popup-form .contact-cta:hover {
+      background: #000;
+      color: var(--red);
+      box-shadow: 6px 6px 0 var(--red);
+    }
+    #contact-popup-close {
+      position: absolute;
+      top: 28px;
+      right: 36px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(10,10,10,0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: var(--white);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.3s, background 0.3s, transform 0.3s;
+    }
+    #contact-popup-close:hover {
+      border-color: rgba(255,255,255,0.5);
+      background: rgba(30,30,30,0.9);
+      transform: rotate(90deg);
+    }
+
+    /* ── FOOTER — bigger, bolder. ────────────────────────────── */
+    footer {
+      padding: 40px 0 28px;
+    }
+    .footer-logo {
+      font-family: var(--font-pw);
+      font-size: clamp(3.2rem, 7vw, 5.6rem);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      line-height: 0.85;
+      text-transform: none;
+      color: var(--white);
+      margin-right: 56px;
+    }
+    .footer-logo span { color: var(--green); }
+    .footer-location {
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      font-weight: 600;
+      margin-top: 6px;
+    }
+    .footer-top > div:first-child { display: flex; flex-direction: column; gap: 0; padding-right: 48px; }
+    .footer-top {
+      margin-bottom: 20px;
+      gap: 32px;
+    }
+    .footer-nav {
+      gap: 22px;
+      row-gap: 8px;
+    }
+    .footer-nav a {
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      font-weight: 900;
+      color: var(--dim);
+      line-height: 1.2;
+    }
+    .footer-nav a:hover { color: var(--yellow); }
+    .footer-copy {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      font-weight: 700;
+      color: var(--dim);
+      line-height: 1.2;
+    }
+    .footer-socials a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.18);
+      color: var(--white);
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .footer-socials a:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.5);
+    }
+    .footer-bottom { padding-top: 18px; }
+
+    @media (max-width: 580px) {
+      footer { padding: 32px 0 24px; }
+      .footer-nav { gap: 14px; }
+      .footer-nav a { font-size: 0.74rem; letter-spacing: 0.16em; }
+      .footer-top > div:first-child { padding-right: 0; }
+      .footer-logo { margin-right: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ BOOK ══════════════════════════════════════════ -->
+  <button type="button" id="book-btn" aria-label="Book a session — open contact form">BOOK</button>
+
+  <!-- ══ MENU TRIGGER ══════════════════════════════════════════ -->
+  <button id="menu-trigger" aria-label="Open navigation">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round">
+      <line x1="11" y1="2" x2="11" y2="20"/>
+      <line x1="2" y1="11" x2="20" y2="11"/>
+    </svg>
+  </button>
+
+  <!-- ══ MENU OVERLAY ══════════════════════════════════════════ -->
+  <nav id="menu-overlay" aria-label="Main navigation">
+
+  </nav>
+
+  <!-- ══ CONTACT POPUP ═════════════════════════════════════════ -->
+  <div id="contact-popup" role="dialog" aria-modal="true" aria-labelledby="contact-popup-title" aria-hidden="true">
+    <button type="button" id="contact-popup-close" aria-label="Close contact form">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <line x1="4" y1="4" x2="18" y2="18"/>
+        <line x1="18" y1="4" x2="4" y2="18"/>
+      </svg>
+    </button>
+    <div class="contact-popup-inner">
+      <p class="contact-popup-eyebrow">Book a Session</p>
+      <h2 class="contact-popup-title" id="contact-popup-title">Let's make it <em>loud</em></h2>
+      <form id="contact-popup-form" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <input class="form-input" type="text" id="cp-name" name="name" placeholder=" " required autocomplete="name">
+            <label class="form-label" for="cp-name">Your name</label>
+          </div>
+          <div class="field">
+            <input class="form-input" type="email" id="cp-email" name="email" placeholder=" " required autocomplete="email">
+            <label class="form-label" for="cp-email">Email</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <select class="form-select" id="cp-service" name="service" required>
+              <option value="" disabled selected hidden></option>
+              <option value="recording">Recording Session</option>
+              <option value="mixing">Mixing</option>
+              <option value="production">Production</option>
+              <option value="other">Other</option>
+            </select>
+            <label class="form-label" for="cp-service">Service</label>
+          </div>
+          <div class="field">
+            <select class="form-select" id="cp-budget" name="budget" required>
+              <option value="" disabled selected hidden></option>
+              <option value="<2k">Under £2,000</option>
+              <option value="2-5k">£2,000 – £5,000</option>
+              <option value="5-10k">£5,000 – £10,000</option>
+              <option value="10k+">£10,000+</option>
+            </select>
+            <label class="form-label" for="cp-budget">Budget</label>
+          </div>
+        </div>
+        <div class="field">
+          <textarea class="form-textarea" id="cp-details" name="details" placeholder=" " required></textarea>
+          <label class="form-label" for="cp-details">Project details</label>
+        </div>
+        <button type="submit" class="contact-cta" id="cp-submit">
+          Send Message
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+  <div class="progressive-blur blur-top"></div>
+<div class="progressive-blur blur-bottom"></div>
+
+
+  <!-- ══ HERO ══════════════════════════════════════════════════ -->
+  <section id="hero" aria-labelledby="hero-heading">
+    <h1 id="hero-heading" class="sr-only">Buffalo Studio — Analog Recording Studio in Sheffield, South Yorkshire</h1>
+    <div class="title-container" aria-hidden="true">
+      <div class="word-row" id="row-buffalo"></div>
+      <div class="word-row" id="row-studio"></div>
+    </div>
+  </section>
+
+
+  <!-- ══ STUDIO ════════════════════════════════════════════════ -->
+  <section id="studio" aria-labelledby="studio-heading">
+    <div class="studio-inner">
+      <div class="studio-iframe-wrap reveal">
+        <iframe id="studio-iframe" src="stereophone.html" width="560" height="420" frameborder="0" loading="lazy" title="Buffalo Studio — interactive 3D space tour of the Sheffield recording studio"></iframe>
+      </div>
+      <div class="reveal studio-copy">
+        <h2 id="studio-heading" class="sr-only">The Studio</h2>
+        <p class="studio-text">
+          Buffalo Studio is a world-class <span class="accent-red">analog recording studio</span> in <strong>Sheffield, South Yorkshire</strong>, built around a 48-channel <span class="accent-red">SSL 4000G+ console</span> and a curated collection of rare vintage instruments and outboard gear. Designed for artists who want to capture something <span class="accent-red pulse">real</span> — warm, organic, and <span class="accent-red">alive</span> — the studio offers two distinct rooms: an intimate live room built for sound, and a meticulously treated control room engineered for clarity. Whether you're cutting a full band, or a solo record, Buffalo delivers the <span class="accent-red">analog depth</span> that can't be replicated in the box.
+        </p>
+        <p class="studio-text studio-services">
+          <strong>Services:</strong> full-band recording, mixing, record production, and overdub sessions for artists across <span class="accent-red">Sheffield</span>, Leeds, Manchester, Nottingham and the wider UK. We track drums, guitars, strings, brass, vocals — then mix them back through the SSL for depth you can't fake in the box.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+    <!-- ══ MARQUEE ═══════════════════════════════════════════════ -->
+  <section id="marquee-section" aria-hidden="true">
+    <div class="marquee-track" id="marquee-track">
+      <div class="marquee-item">Buffalo Studio<span class="dot">•</span>SSL 4000G+ Console<span class="dot">•</span>Sheffield<span class="dot">•</span>Record Production<span class="dot">•</span>Professional Mixing<span class="dot">•</span>Music Production<span class="dot">•</span>Tracking & Overdubs<span class="dot">•</span>Sonic Excellence<span class="dot">•</span>Live Tracking<span class="dot">•</span>Modern Masters<span class="dot">•</span>South Yorkshire<span class="dot">•</span></div>
+      <div class="marquee-item" aria-hidden="true">Buffalo Studio<span class="dot">•</span>Analog Recording<span class="dot">•</span>London<span class="dot">•</span>Vintage Sound<span class="dot">•</span></div>
+    </div>
+  </section>
+
+
+  <!-- ══ GALLERY ════════════════════════════════════════════════ -->
+  <section id="gallery">
+    <div class="gallery-header reveal">
+      <h2 class="section-title">Gallery</h2>
+      <div class="gallery-filters" id="gallery-filters"></div>
+    </div>
+    <div class="gallery-rule"></div>
+    <div class="gallery-grid-wrap">
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </div>
+  </section>
+
+  <div id="lightbox"><img src="" alt="Enlarged view"></div>
+
+
+
+
+  <!-- ══ BUFFALO PARALLAX ═══════════════════════════════════════
+       Full-width fixed-attachment image that reveals on scroll
+       between the Gallery and Equipment sections. -->
+  <section id="buffalo-parallax" role="img" aria-label="Buffalo Studio — inside the live room"></section>
+
+
+
+
+
+
+  <!-- ══ EQUIPMENT ══════════════════════════════════════════════
+       On mobile, the CSS above hides every <li> past the 3rd
+       in each block. Tapping this toggle flips the
+       body[data-equip-expanded] attribute to reveal / collapse
+       the full list. The button is hidden on desktop.
+  ═══════════════════════════════════════════════════════════════ -->
+  <section id="equipment">
+    <div class="equipment-inner">
+      <h2 class="equipment-title reveal">Equipment</h2>
+      <div class="block-wrapper" id="equip-blocks"></div>
+      <div class="equip-toggle-wrap">
+        <button type="button" class="equip-toggle" id="equip-toggle"
+                aria-expanded="false" aria-controls="equip-blocks">
+          <span class="equip-toggle-label">Show Full Inventory</span>
+          <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ JB PILON ══════════════════════════════════════════════ -->
+  <section id="jb-pilon">
+    <div class="jb-inner">
+      <div class="jb-img-wrap reveal">
+        <div class="jb-frame">
+          <img src="assets/jbpilon.jpg" alt="JB Pilon — founder, producer and engineer at Buffalo Studio Sheffield" loading="lazy" decoding="async" width="380" height="530">
+        </div>
+      </div>
+      <div class="jb-content reveal">
+        <h2 class="jb-name jb-name--stacked">
+          <span class="pw" style="color:var(--white)">JB</span>
+          <span class="pw" style="color:var(--red)">Pilon</span>
+        </h2>
+        <p class="jb-role">Producer · Engineer · Multi-Instrumentalist</p>
+        <div class="jb-actions">
+          <a href="https://jbpilon.com" target="_blank" class="jb-arrow" aria-label="Visit website">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4.5">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+          <div class="jb-bio">
+            <p>Founder of Buffalo Studio, JB Pilon is an acclaimed producer and engineer known for his warm, analog-driven sound and collaborative approach to songwriting.</p>
+            <div class="jb-socials">
+              <a href="https://www.instagram.com/jbpilon/" target="_blank" aria-label="Instagram">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="2" y="2" width="20" height="20" rx="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+              </a>
+              <a href="mailto:hello@jbpilon.com" aria-label="Email">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TESTIMONIALS — slider ════════════════════════════════
+       One quote at a time. Prev/Next + dots control a translateX
+       track. Content is rendered from the `testimonials` array
+       in the script at the bottom. Catchy headline uses a
+       PickleWeasel accent on one word.
+  ═══════════════════════════════════════════════════════════════ -->
+  <section id="testimonials">
+    <div class="testi-cards reveal">
+      <div class="testi-slider-viewport">
+        <div class="testi-slider-track" id="testi-track"></div>
+      </div>
+      <div class="testi-controls">
+        <div class="testi-dots" id="testi-dots" role="tablist" aria-label="Select testimonial"></div>
+        <div class="testi-nav">
+          <button class="testi-nav-btn" id="testi-prev" aria-label="Previous testimonial">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
+                 viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+          <button class="testi-nav-btn" id="testi-next" aria-label="Next testimonial">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
+                 viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CLIENTS — logo wall ═══════════════════════════════════
+       Static markup with mix-blend screen logos for a clean
+       monochrome wall. Logos live in /partners.
+  ═══════════════════════════════════════════════════════════════ -->
+  <section id="clients" class="clients-section has-tri" aria-label="Client logos">
+    <div class="clients-inner reveal">
+      <h2 class="clients-big-title">Who <span class="tint-green">we've</span> worked <span class="tint-red">with</span></h2>
+      <div class="clients-logos">
+        <figure class="cl"><img src="partners/warner.png" alt="Warner Music" loading="lazy"/></figure>
+        <figure class="cl"><img src="partners/parlophone.png" alt="Parlophone" loading="lazy"/></figure>
+        <figure class="cl"><img src="partners/bbc.png" alt="BBC" loading="lazy"/></figure>
+        <figure class="cl"><img src="partners/ku.png" alt="KU" loading="lazy"/></figure>
+        <figure class="cl"><img src="partners/pitchandsync.png" alt="Pitch &amp; Sync" loading="lazy"/></figure>
+        <figure class="cl"><img src="partners/magneticeye.png" alt="Magnetic Eye Records" loading="lazy"/></figure>
+        <figure class="cl"><img src="partners/whirlwind.png" alt="Whirlwind Recordings" loading="lazy"/></figure>
+        <figure class="cl"><img src="partners/villagelive.png" alt="Village Live" loading="lazy"/></figure>
+        <figure class="cl"><img src="partners/blaggers.png" alt="Blaggers" loading="lazy"/></figure>
+        <figure class="cl"><img src="partners/spiritual.png" alt="Spiritual Records" loading="lazy"/></figure>
+        <figure class="cl"><img src="partners/bensherman.png" alt="Ben Sherman" loading="lazy"/></figure>
+        <figure class="cl"><img src="partners/oatly.png" alt="Oatly" loading="lazy"/></figure>
+        <figure class="cl"><img src="partners/french78.png" alt="French 78" loading="lazy"/></figure>
+        <figure class="cl"><img src="partners/adelphoi.png" alt="Adelphoi Music" loading="lazy"/></figure>
+        <figure class="cl"><img src="partners/gongoh.png" alt="Gong-Oh Records" loading="lazy"/></figure>
+        <figure class="cl"><img src="partners/imaginarymillions.png" alt="Imaginary Millions" loading="lazy"/></figure>
+        <figure class="cl"><img src="partners/mcdo.jpg" alt="McDonald's" loading="lazy"/></figure>
+        <figure class="cl"><img src="partners/ambermusic.png" alt="Amber Music" loading="lazy"/></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ════════════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">BUFFALO<span>.</span></div>
+          <div class="footer-location">Sheffield, UK</div>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#studio">Studio</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#equipment">Equipment</a>
+          <a href="#jb-pilon">JB Pilon</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#clients">Clients</a>
+          <a href="#" data-open-contact>Contact</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2026 Buffalo Studio. All rights reserved.</span>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/jbpilon/" target="_blank" rel="noopener" aria-label="Buffalo Studio on Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="mailto:hello@jbpilon.com" aria-label="Email Buffalo Studio">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══ SCRIPTS ════════════════════════════════════════════════ -->
+  <script>
+    /* ── MENU ─────────────────────────────────────────────────── */
+    const menuLinks = [
+      { label: "Studio",       href: "#studio" },
+      { label: "Gallery",      href: "#gallery" },
+      { label: "Equipment",    href: "#equipment" },
+      { label: "JB Pilon",     href: "#jb-pilon" },
+      { label: "Testimonials", href: "#testimonials" },
+      { label: "Clients",      href: "#clients" },
+      { label: "Contact",      href: "#contact-popup", action: "contact" },
+    ];
+
+    const overlay  = document.getElementById('menu-overlay');
+    const trigger  = document.getElementById('menu-trigger');
+
+    menuLinks.forEach(({ label, href, action }) => {
+      const a = document.createElement('a');
+      a.href = href;
+      a.className = 'flip-link';
+      if (action === 'contact') a.setAttribute('data-open-contact', '');
+      const top = document.createElement('div');
+      top.className = 'flip-top';
+      const bot = document.createElement('div');
+      bot.className = 'flip-bottom';
+      [...label].forEach((ch, i) => {
+        const d = `${i * 24}ms`;
+        const st = document.createElement('span');
+        st.textContent = ch === ' ' ? '\u00A0' : ch;
+        st.style.transitionDelay = d;
+        const sb = document.createElement('span');
+        sb.textContent = ch === ' ' ? '\u00A0' : ch;
+        sb.style.transitionDelay = d;
+        top.appendChild(st);
+        bot.appendChild(sb);
+      });
+      a.appendChild(top);
+      a.appendChild(bot);
+      a.addEventListener('click', closeMenu);
+      // Keep menu socials at the bottom by inserting before them
+      const socials = overlay.querySelector('.menu-socials');
+      if (socials) overlay.insertBefore(a, socials);
+      else overlay.appendChild(a);
+    });
+
+    function openMenu()  {
+      overlay.classList.add('open');
+      trigger.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      overlay.classList.remove('open');
+      trigger.classList.remove('open');
+      if (!document.getElementById('contact-popup').classList.contains('open')) {
+        document.body.style.overflow = '';
+      }
+    }
+    trigger.addEventListener('click', () =>
+      overlay.classList.contains('open') ? closeMenu() : openMenu()
+    );
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeMenu(); });
+
+
+    /* ── CONTACT POPUP ────────────────────────────────────────
+       Opened by the BOOK button and any [data-open-contact] link.
+       Closed via the X, Escape, or clicking the backdrop. */
+    (function initContactPopup() {
+      const popup = document.getElementById('contact-popup');
+      const closeBtn = document.getElementById('contact-popup-close');
+      const bookBtn = document.getElementById('book-btn');
+      const form = document.getElementById('contact-popup-form');
+      const submit = document.getElementById('cp-submit');
+
+      function openPopup(e) {
+        if (e) e.preventDefault();
+        popup.classList.add('open');
+        popup.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => {
+          const first = popup.querySelector('input, select, textarea');
+          if (first) first.focus();
+        }, 300);
+      }
+      function closePopup() {
+        popup.classList.remove('open');
+        popup.setAttribute('aria-hidden', 'true');
+        if (!overlay.classList.contains('open')) {
+          document.body.style.overflow = '';
+        }
+      }
+
+      function togglePopup(e) {
+        if (e) e.preventDefault();
+        if (popup.classList.contains('open')) closePopup();
+        else openPopup();
+      }
+      bookBtn.addEventListener('click', togglePopup);
+      closeBtn.addEventListener('click', closePopup);
+      popup.addEventListener('click', e => { if (e.target === popup) closePopup(); });
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && popup.classList.contains('open')) closePopup();
+      });
+      document.addEventListener('click', e => {
+        const trig = e.target.closest('[data-open-contact]');
+        if (trig) openPopup(e);
+      });
+
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+        const original = submit.innerHTML;
+        submit.textContent = 'Message Sent ✓';
+        submit.disabled = true;
+        setTimeout(() => {
+          submit.innerHTML = original;
+          submit.disabled = false;
+          form.reset();
+          closePopup();
+        }, 2500);
+      });
+    })();
+
+
+    /* ── HERO ─────────────────────────────────────────────────── */
+    const heroImages = [
+      'assets/DSC_0039_control.jpg','assets/DSC_0041_control.jpg','assets/DSC_0065_instru.jpg',
+      'assets/DSC_0066_gear.jpg',   'assets/DSC_0067_gear.jpg',   'assets/DSC_0072_control.jpg',
+      'assets/DSC_0080_gear.jpg',   'assets/DSC_0083_gear.jpg',   'assets/DSC_0085_gear.jpg',
+      'assets/DSC_0088_gear.jpg',   'assets/DSC_0096_control.jpg','assets/DSC_0099_gear.jpg',
+      'assets/DSC_0103_live.jpg',   'assets/DSC_0105_live.jpg',   'assets/DSC_0106_instru.jpg',
+      'assets/DSC_0109_instru.jpg'
+    ];
+
+    function shuffle(a) {
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    const shuffledImgs = shuffle([...heroImages]);
+    const heroWords = [
+      { text: 'BUFFALO', id: 'row-buffalo' },
+      { text: 'STUDIO',  id: 'row-studio'  }
+    ];
+    const allLetters = [];
+    let imgCursor = 0;
+
+    heroWords.forEach(({ text, id }) => {
+      const row = document.getElementById(id);
+      [...text].forEach(ch => {
+        const img = shuffledImgs[imgCursor++ % shuffledImgs.length];
+        const el = document.createElement('span');
+        el.className = 'letter';
+
+        const imgEl = document.createElement('span');
+        imgEl.className = 'letter-image';
+        imgEl.style.backgroundImage = `url('${img}')`;
+        imgEl.textContent = ch;
+
+        const baseEl = document.createElement('span');
+        baseEl.className = 'letter-base';
+        baseEl.textContent = ch;
+
+        const overlayEl = document.createElement('span');
+        overlayEl.className = 'letter-overlay';
+        overlayEl.textContent = ch;
+
+        el.appendChild(imgEl);
+        el.appendChild(baseEl);
+        el.appendChild(overlayEl);
+        row.appendChild(el);
+        allLetters.push({ letterEl: el, imageEl: imgEl, overlayEl });
+      });
+    });
+
+    document.getElementById('hero').addEventListener('mousemove', e => {
+      const xp = e.clientX / window.innerWidth;
+      const yp = e.clientY / window.innerHeight;
+      allLetters.forEach(({ imageEl }) => {
+        imageEl.style.backgroundPosition = `${10 + xp * 80}% ${10 + yp * 80}%`;
+      });
+    });
+
+    allLetters.forEach(({ letterEl }, i) => {
+      setTimeout(() => {
+        letterEl.style.transform = 'scale(1)';
+        letterEl.style.opacity  = '1';
+      }, i * 80);
+    });
+
+    setTimeout(() => {
+      allLetters.forEach(({ overlayEl }, i) => {
+        setTimeout(() => {
+          overlayEl.style.setProperty('--flash-duration', '0.5s');
+          overlayEl.classList.remove('flash');
+          void overlayEl.offsetWidth;
+          overlayEl.classList.add('flash');
+        }, i * 50);
+      });
+    }, (allLetters.length - 1) * 80 + 600);
+
+
+    /* ── GALLERY ──────────────────────────────────────────────── */
+    gsap.registerPlugin(Flip);
+
+    const galFiles = [
+      'DSC_0039_control.jpg','DSC_0041_control.jpg','DSC_0065_instru.jpg',
+      'DSC_0066_gear.jpg',   'DSC_0067_gear.jpg',   'DSC_0072_control.jpg',
+      'DSC_0080_gear.jpg',   'DSC_0083_gear.jpg',   'DSC_0085_gear.jpg',
+      'DSC_0088_gear.jpg',   'DSC_0096_control.jpg','DSC_0099_gear.jpg',
+      'DSC_0103_live.jpg',   'DSC_0105_live.jpg',   'DSC_0106_instru.jpg',
+      'DSC_0109_instru.jpg'
+    ];
+
+    const catMap = {
+      control: { key: 'control', label: 'Control Room' },
+      live:    { key: 'live',    label: 'Live Room' },
+      gear:    { key: 'gear',    label: 'Gear' },
+      instru:  { key: 'instru',  label: 'Instruments' },
+    };
+
+    const galGrid    = document.getElementById('gallery-grid');
+    const galFilters = document.getElementById('gallery-filters');
+    const lightbox   = document.getElementById('lightbox');
+    const lbImg      = lightbox.querySelector('img');
+    const usedCats   = new Set();
+
+    galFiles.forEach(name => {
+      const raw = name.split('_').pop().split('.')[0];
+      const cat = catMap[raw] || { key: raw, label: raw };
+      usedCats.add(cat.key);
+
+      const div = document.createElement('div');
+      div.className = 'g-item';
+      div.dataset.flip = cat.key;
+      div.innerHTML = `<img src="assets/${name}" alt="Buffalo Studio ${cat.label} — ${name.replace(/\.(jpg|png)$/i,'').replace(/_/g,' ')}" loading="lazy" decoding="async">`;
+      div.addEventListener('click', () => {
+        lbImg.src = `assets/${name}`;
+        lightbox.style.display = 'flex';
+        gsap.to(lightbox, { opacity: 1, duration: 0.35, ease: 'power2.out' });
+        gsap.fromTo(lbImg, { scale: 0.88 }, { scale: 1, duration: 0.5, ease: 'back.out(1.4)' });
+      });
+      galGrid.appendChild(div);
+    });
+
+    lightbox.addEventListener('click', () => {
+      gsap.to(lightbox, { opacity: 0, duration: 0.28, onComplete: () => {
+        lightbox.style.display = 'none';
+        lbImg.src = '';
+      }});
+    });
+
+    let filterHtml = `<button class="gal-btn active" data-filter="all">All</button>`;
+    ['control','live','gear','instru'].forEach(key => {
+      if (usedCats.has(key)) {
+        filterHtml += `<button class="gal-btn" data-filter="${key}">${catMap[key].label}</button>`;
+      }
+    });
+    galFilters.innerHTML = filterHtml;
+
+    const galBtns  = galFilters.querySelectorAll('.gal-btn');
+    const galItems = galGrid.querySelectorAll('.g-item');
+
+    const galSection = document.getElementById('gallery');
+
+    galBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const f = btn.dataset.filter;
+
+        // Lock section height before DOM changes to prevent jump
+        const lockedH = galSection.offsetHeight;
+        galSection.style.minHeight = lockedH + 'px';
+        galSection.classList.remove('height-locked'); // reset transition first
+
+        const state = Flip.getState(galItems);
+        galBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        galItems.forEach(item => {
+          item.classList.toggle('hidden', f !== 'all' && item.dataset.flip !== f);
+        });
+
+        Flip.from(state, {
+          duration: 0.6, scale: true, ease: 'power2.inOut', stagger: 0.02, absolute: true,
+          onEnter: els => gsap.fromTo(els, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.45 }),
+          onLeave: els => gsap.to(els, { opacity: 0, scale: 0.9, duration: 0.35 }),
+          onComplete: () => {
+            // Smoothly release the locked height
+            galSection.classList.add('height-locked');
+            galSection.style.minHeight = '0px';
+            setTimeout(() => {
+              galSection.classList.remove('height-locked');
+              galSection.style.minHeight = '';
+            }, 700);
+          }
+        });
+      });
+    });
+
+
+    /* ── EQUIPMENT ────────────────────────────────────────────── */
+    const equipData = [
+      { cat: 'Console', items: ['48 channels SSL 4000G+ series mixing desk','SSL 4000G+ bus compressor','THD Labs Tangerine Automation Interface'] },
+      { cat: 'Conversion', items: ['4x Prism Sound ADA-8XR'] },
+      { cat: 'Monitoring', items: ['ATC SCM25A speakers','Yamaha NS10','Heddphone®','Hear Technologies Hearback system x8'] },
+      { cat: 'Software', items: ['ProTools Ultimate 2023','Plugins: Waves, Softube, Soundtoys, Brainworx, Oeksound, Magic Death Eye, Shadow Hills, Vertigo, Arturia, etc...'] },
+      { cat: 'External Preamps', items: ['Universal Audio 610 x2','Neve 1081 x2','Neve 33115 x2','Telefunken v672 x4','Neve Portico 5012 dual preamp','Altec 1566A valve preamp','Shure M67 4 channel mixer/preamp'] },
+      { cat: 'Compressors', items: ['Urei 1176 Black Original','DBX 162 stereo','DBX 160 x3','API 2500','ADR Compex F760X RS','Empirical Labs Distressor','Empirical Labs Fatso Jr EL7','Hermit Circuits Level-Loc stereo'] },
+      { cat: 'Equalizers', items: ['Pultec EQH-2','Pultec MEQ-5','Summit Audio EQF-100 x2','Urei 545 x2','Neve 1081 x2','Neve 33115 x2'] },
+      { cat: 'Effects', items: ['Echofix EFX3R','Urei Cooper Time Cube','Evan Super Echo SE810 tape delay','Hawk Echo Unit HR40 spring echo','Pioneer SR101 valve spring reverb','Bell BD80','Yamaha SPX2000','Bricasti M7','TC Electronic M5000'] },
+      { cat: 'Condensers', items: ['Neumann U87 P48 (1971)','Neumann U87 Vintage Purple Badge x2','Neumann U87 Black Vintage','Neumann KM184 x2','Neumann KM100','Sony C38-B x2','Calrec CM652 x2','Calrec CM1000 x2','Audio Technica AT5047','Bruel and Kjaar 4011','AKG C414 x4','AKG C451E x3','AKG SE300 B x2','Scope Labs Periscope x2','Sontronics DM1B','Sound Deluxe IFet 7','JZ Vintage 67','Earthworks PM40 piano bar','Audix ADX51 x2','Soundfield SPS422 stereo mic'] },
+      { cat: 'Ribbons', items: ['Coles 4038 x2','AEA R84 x2','Extinct Audio BM9 custom x2','Royer R-122 x2','Reslo RB BBC specs x2','Beyerdynamic M160 x2','Beyerdynamic M260','SE Tube Ribbon','Sontronics Sigma x2','Sontronics Delta'] },
+      { cat: 'Dynamics / Others', items: ['Shure 545SD Unidyne III','Shure SM57 x2','Shure SM58','Shure SM7B','Sennheiser MD421 x4','Beyerdynamic M88','Beyerdynamic M101','Beyerdynamic M201','AKG D12 x2','AKG D190','AKG D130','ElectroVoice RE20','Audix D6','Reslo UD1','Mélodium 75A','Wasaphone MMXIV','Oddball lofi microphones'] },
+      { cat: 'Drums', items: ['Premier 202 Transition kit (1969)','Premier PD101 Resonator snare','Rogers Dynasonic snare (1971)','Ludwig Acrolite snare (1967)','Junk Snare 70s boomer','Pearl Export drumkit','Gretsch Blackbird bass drum','Selection of vintage cymbals','Selection of percussions'] },
+      { cat: 'Amps & Guitars', items: ['Selection of electric & acoustic guitars','Selection of pedals','Fender Bassman w/ 4x10" cab','Fender Super Sonic 22','WEM Dominator Mk III (1960s)','Fender Hot Rod Deville 4x10"','Zilla cab 2x12" Creamback','Marshall JCM2000 w/ 4x10" cab','Vox AC4TV','Ampeg B-100 (1970s)','Acoustic Control Corp 125 combo'] },
+      { cat: 'Pianos & Keys', items: ['Yamaha C7 conservatory grand','Rogers of London 1920\'s upright','Hammond C3 organ & cabinet','Hammond L122 organ','716 Leslie + preamp','Fender Rhodes suitcase','Mellotron MKV1','Hohner Clavinet Pianet Duo','Roland RS202 string machine','Roland Juno 6 synthesizer','Yamaha DX7 synthesizer','Marimba / Sitar / Oddities'] },
+    ];
+
+    const equipWrap = document.getElementById('equip-blocks');
+    equipData.forEach(({ cat, items }) => {
+      const block = document.createElement('div');
+      block.className = 'section-block';
+      const h3 = document.createElement('h3');
+      h3.textContent = cat;
+      const ul = document.createElement('ul');
+      items.forEach(text => {
+        const li = document.createElement('li');
+        li.textContent = text;
+        ul.appendChild(li);
+      });
+      block.appendChild(h3);
+      block.appendChild(ul);
+      equipWrap.appendChild(block);
+    });
+
+    document.addEventListener('mousemove', e => {
+      equipWrap.querySelectorAll('li').forEach(li => {
+        const r  = li.getBoundingClientRect();
+        const dy = Math.abs(e.clientY - (r.top + r.height / 2));
+        const dx = Math.abs(e.clientX - (r.left + r.width  / 2));
+        if (dy < 80 && dx < 200) {
+          const s = 1 + 0.1 * Math.cos((dy / 80) * (Math.PI / 2));
+          li.style.color = '#fff';
+        } else {
+          li.style.transform = 'scale(1)';
+          li.style.color = 'var(--dim)';
+        }
+      });
+    });
+
+
+    /* ── TESTIMONIALS (slider) ─────────────────────────────────
+       Builds slides from the data array. A single translateX on
+       the track handles the transition — no per-slide classes,
+       no animation library needed. Auto-rotates every 8s and
+       pauses on pointer hover. */
+    const testimonials = [
+      { quote: "The ideal place for recording vintage, beefy, old school sounds. JB is a mad professor.", author: "Robohands" },
+      { quote: "JB is a mastermind… helping with structure, sound and harmonies. Our creative home.", author: "JW Paris" },
+      { quote: "Two days with JB and we got the best recording we have ever been a part of.", author: "The Kecks" },
+      { quote: "JB is a fine engineer who makes you feel relaxed and gets the best results out of you.", author: "Elephant Tree" },
+      { quote: "Such a cool creative space—always feel relaxed here.", author: "Hatty Keane" },
+      { quote: "Amazing studio with great gear, mics and atmosphere.", author: "Sunglasses for Jaws" },
+      { quote: "JB has been there since day one—full of wild ideas that help turn our songs into a finished album.", author: "Bright Curse" }
+    ];
+
+    (function initTestiSlider() {
+      const track = document.getElementById('testi-track');
+      const dotsC = document.getElementById('testi-dots');
+      const prev  = document.getElementById('testi-prev');
+      const next  = document.getElementById('testi-next');
+      if (!track) return;
+
+      // Build slides + dot buttons
+      testimonials.forEach((t, i) => {
+        const slide = document.createElement('div');
+        slide.className = 'testi-slide';
+        slide.innerHTML = `
+          <p class="testi-slide-quote">“${t.quote}”</p>
+          <div class="testi-slide-meta">
+            <span class="testi-slide-author">${t.author}</span>
+            <span class="testi-slide-idx"><b>${String(i + 1).padStart(2, '0')}</b> / ${String(testimonials.length).padStart(2, '0')}</span>
+          </div>`;
+        track.appendChild(slide);
+
+        const dot = document.createElement('button');
+        dot.className = 'testi-dot-btn' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', `Go to testimonial ${i + 1}`);
+        dot.addEventListener('click', () => go(i));
+        dotsC.appendChild(dot);
+      });
+
+      let idx = 0;
+      const total = testimonials.length;
+
+      function go(i) {
+        idx = (i + total) % total;
+        track.style.transform = `translateX(-${idx * 100}%)`;
+        dotsC.querySelectorAll('.testi-dot-btn').forEach((d, di) => {
+          d.classList.toggle('active', di === idx);
+        });
+      }
+      prev.addEventListener('click', () => go(idx - 1));
+      next.addEventListener('click', () => go(idx + 1));
+
+      // Auto-advance; pause on hover for breathing room.
+      let timer = setInterval(() => go(idx + 1), 8000);
+      const section = document.getElementById('testimonials');
+      section.addEventListener('mouseenter', () => clearInterval(timer));
+      section.addEventListener('mouseleave', () => {
+        clearInterval(timer);
+        timer = setInterval(() => go(idx + 1), 8000);
+      });
+    })();
+
+
+/* ── EQUIPMENT SHOW / HIDE (mobile) ────────────────────────
+       We find the 'Monitoring' block and hide all category blocks
+       that come after it by default. Clicking the button reveals them. */
+    (function initEquipToggle() {
+      const btn = document.getElementById('equip-toggle');
+      if (!btn) return;
+      
+      const labelEl = btn.querySelector('.equip-toggle-label');
+      
+      function updateVisibility(isExpanded) {
+        // Select the blocks dynamically in case they just rendered
+        const allBlocks = document.querySelectorAll('.section-block'); 
+        
+        if (window.innerWidth <= 768) {
+          let hideCurrent = false; // Flag to know when we've passed Monitoring
+          
+          allBlocks.forEach(block => {
+            if (hideCurrent) {
+              // We are past 'Monitoring', so hide it if not expanded
+              block.style.display = isExpanded ? '' : 'none';
+            } else {
+              // We haven't passed 'Monitoring' yet, always show it
+              block.style.display = '';
+            }
+
+            // Check if THIS block is 'Monitoring'. 
+            // If it is, flag that the NEXT blocks should be hidden.
+            const h3 = block.querySelector('h3');
+            if (h3 && h3.textContent.trim().toLowerCase() === 'monitoring') {
+              hideCurrent = true;
+            }
+          });
+        } else {
+          // On desktop, ensure all blocks are visible
+          allBlocks.forEach(block => block.style.display = '');
+        }
+      }
+
+      // 1. Set initial state on load (delay slightly to ensure blocks are rendered)
+      setTimeout(() => updateVisibility(false), 50);
+
+      // 2. Re-calculate if the user rotates their phone or resizes
+      window.addEventListener('resize', () => {
+        const expanded = document.body.getAttribute('data-equip-expanded') === 'true';
+        updateVisibility(expanded);
+      });
+
+      // 3. Handle the button click
+      btn.addEventListener('click', () => {
+        const expanded = document.body.getAttribute('data-equip-expanded') === 'true';
+        const next = !expanded;
+        
+        document.body.setAttribute('data-equip-expanded', String(next));
+        btn.setAttribute('aria-expanded', String(next));
+        labelEl.textContent = next ? 'Show Less' : 'Show Full Inventory';
+        
+        updateVisibility(next);
+      });
+    })();
+
+
+    /* ── MARQUEE ─────────────────────────────────────────────── */
+    (function() {
+      const track = document.getElementById('marquee-track');
+      if (!track) return;
+
+      let pos = 0;
+      let lastT = null;
+      let lastScrollY = window.scrollY;
+      let smoothVel = 0;
+
+      function lerp(a, b, t) { return a + (b - a) * t; }
+
+      function frame(t) {
+        if (!lastT) lastT = t;
+        const dt = Math.min(t - lastT, 50) / 1000; // seconds, capped
+        lastT = t;
+
+        // Raw scroll velocity (px/s)
+        const curY = window.scrollY;
+        const rawVel = (curY - lastScrollY) / (dt || 0.016);
+        lastScrollY = curY;
+
+        // Smooth it with lerp (spring-like)
+        smoothVel = lerp(smoothVel, rawVel, 0.12);
+
+        // Base speed + scroll boost (scroll down = faster)
+        const speed = -300 + smoothVel * -0.08;
+        pos += speed * dt;
+
+        // Seamless loop: wrap by one copy width
+        const copyW = track.children[0] ? track.children[0].offsetWidth : 0;
+        if (copyW > 0) {
+          if (pos <= -copyW) pos += copyW;
+          if (pos > 0)       pos -= copyW;
+        }
+
+        track.style.transform = `translateX(${pos}px)`;
+        requestAnimationFrame(frame);
+      }
+
+      requestAnimationFrame(frame);
+    })();
+
+
+    /* ── SCROLL REVEAL ────────────────────────────────────────── */
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          en.target.classList.add('visible');
+          revealObs.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+  </script>
+</body>
+</html>
