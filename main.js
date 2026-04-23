@@ -434,38 +434,54 @@
       let lastT = null;
       let lastScrollY = window.scrollY;
       let smoothVel = 0;
+      let rafId = null;
+      let isVisible = false;
+      const copyW = track.children[0] ? track.children[0].offsetWidth : 0;
 
       function lerp(a, b, t) { return a + (b - a) * t; }
 
       function frame(t) {
         if (!lastT) lastT = t;
-        const dt = Math.min(t - lastT, 50) / 1000; // seconds, capped
+        const dt = Math.min(t - lastT, 50) / 1000;
         lastT = t;
 
-        // Raw scroll velocity (px/s)
         const curY = window.scrollY;
         const rawVel = (curY - lastScrollY) / (dt || 0.016);
         lastScrollY = curY;
 
-        // Smooth it with lerp (spring-like)
         smoothVel = lerp(smoothVel, rawVel, 0.12);
 
-        // Base speed + scroll boost (scroll down = faster)
         const speed = -300 + smoothVel * -0.08;
         pos += speed * dt;
 
-        // Seamless loop: wrap by one copy width
-        const copyW = track.children[0] ? track.children[0].offsetWidth : 0;
         if (copyW > 0) {
           if (pos <= -copyW) pos += copyW;
           if (pos > 0)       pos -= copyW;
         }
 
         track.style.transform = `translateX(${pos}px)`;
-        requestAnimationFrame(frame);
+        rafId = requestAnimationFrame(frame);
       }
 
-      requestAnimationFrame(frame);
+      function start() {
+        if (rafId) return;
+        lastT = null;
+        lastScrollY = window.scrollY;
+        rafId = requestAnimationFrame(frame);
+      }
+
+      function stop() {
+        if (rafId) {
+          cancelAnimationFrame(rafId);
+          rafId = null;
+        }
+      }
+
+      const marqueeObs = new IntersectionObserver(([entry]) => {
+        isVisible = entry.isIntersecting;
+        isVisible ? start() : stop();
+      }, { threshold: 0 });
+      marqueeObs.observe(track);
     })();
 
 
