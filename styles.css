@@ -479,9 +479,6 @@
       padding: 60px 0 50px;
       border-top: 0px solid var(--border);
     }
-    #gallery.height-locked {
-      transition: min-height 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-    }
     .gallery-header {
       max-width: 1200px;
       margin: 0 auto;

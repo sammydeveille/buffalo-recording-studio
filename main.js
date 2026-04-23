@@ -225,16 +225,9 @@
     const galBtns  = galFilters.querySelectorAll('.gal-btn');
     const galItems = galGrid.querySelectorAll('.g-item');
 
-    const galSection = document.getElementById('gallery');
-
     galBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         const f = btn.dataset.filter;
-
-        // Lock section height before DOM changes to prevent jump
-        const lockedH = galSection.offsetHeight;
-        galSection.style.minHeight = lockedH + 'px';
-        galSection.classList.remove('height-locked'); // reset transition first
 
         const state = Flip.getState(galItems);
         galBtns.forEach(b => b.classList.remove('active'));
@@ -244,18 +237,9 @@
         });
 
         Flip.from(state, {
-          duration: 0.6, scale: true, ease: 'power2.inOut', stagger: 0.02, absolute: true,
-          onEnter: els => gsap.fromTo(els, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.45 }),
-          onLeave: els => gsap.to(els, { opacity: 0, scale: 0.9, duration: 0.35 }),
-          onComplete: () => {
-            // Smoothly release the locked height
-            galSection.classList.add('height-locked');
-            galSection.style.minHeight = '0px';
-            setTimeout(() => {
-              galSection.classList.remove('height-locked');
-              galSection.style.minHeight = '';
-            }, 700);
-          }
+          duration: 0.5, scale: true, ease: 'power2.inOut', stagger: 0.02,
+          onEnter: els => gsap.fromTo(els, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4 }),
+          onLeave: els => gsap.to(els, { opacity: 0, scale: 0.9, duration: 0.3 }),
         });
       });
     });
