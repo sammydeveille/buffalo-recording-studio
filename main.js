@@ -279,18 +279,32 @@
       equipWrap.appendChild(block);
     });
 
+    /* Proximity highlight — throttled to rAF, cached NodeList,
+       and only runs when the equipment section is in view. */
+    const equipItems = equipWrap.querySelectorAll('li');
+    let equipVisible = false;
+    let equipRafPending = false;
+    let equipMouseX = 0;
+    let equipMouseY = 0;
+
+    const equipObs = new IntersectionObserver(([entry]) => {
+      equipVisible = entry.isIntersecting;
+    }, { threshold: 0 });
+    equipObs.observe(equipWrap);
+
     document.addEventListener('mousemove', e => {
-      equipWrap.querySelectorAll('li').forEach(li => {
-        const r  = li.getBoundingClientRect();
-        const dy = Math.abs(e.clientY - (r.top + r.height / 2));
-        const dx = Math.abs(e.clientX - (r.left + r.width  / 2));
-        if (dy < 80 && dx < 200) {
-          const s = 1 + 0.1 * Math.cos((dy / 80) * (Math.PI / 2));
-          li.style.color = '#fff';
-        } else {
-          li.style.transform = 'scale(1)';
-          li.style.color = 'var(--dim)';
-        }
+      if (!equipVisible || equipRafPending) return;
+      equipMouseX = e.clientX;
+      equipMouseY = e.clientY;
+      equipRafPending = true;
+      requestAnimationFrame(() => {
+        equipItems.forEach(li => {
+          const r  = li.getBoundingClientRect();
+          const dy = Math.abs(equipMouseY - (r.top + r.height / 2));
+          const dx = Math.abs(equipMouseX - (r.left + r.width  / 2));
+          li.style.color = (dy < 80 && dx < 200) ? '#fff' : '';
+        });
+        equipRafPending = false;
       });
     });
 
