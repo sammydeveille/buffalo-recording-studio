@@ -64,6 +64,7 @@
         popup.classList.add('open');
         popup.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
+        bookBtn.style.display = 'none';
         setTimeout(() => {
           const first = popup.querySelector('input, select, textarea');
           if (first) first.focus();
@@ -72,6 +73,7 @@
       function closePopup() {
         popup.classList.remove('open');
         popup.setAttribute('aria-hidden', 'true');
+        bookBtn.style.display = '';
         if (!overlay.classList.contains('open')) {
           document.body.style.overflow = '';
         }
